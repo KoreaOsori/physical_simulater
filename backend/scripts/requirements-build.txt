@@ -1,0 +1,12 @@
+# Extra one-off dependencies for scripts/build_human_dataset.py's anatomy-mesh
+# step only (marching cubes over the vendored MNI template volumes). Not part
+# of the app's runtime requirements.txt — nothing at request-time needs these,
+# the mesh is baked into human_macro_connectome.json ahead of time.
+#
+#   cd backend
+#   ./.venv/Scripts/python -m pip install -r scripts/requirements-build.txt
+#   ./.venv/Scripts/python scripts/build_human_dataset.py
+
+nibabel==5.4.2
+scikit-image==0.26.0
+scipy==1.18.1

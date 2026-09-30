@@ -1,0 +1,32 @@
+fastapi==0.121.0
+uvicorn[standard]==0.38.0
+pydantic==2.13.2
+pydantic-settings==2.15.0
+websockets==15.0.1
+
+# Human macro connectome chat panel (docs/30) — OpenAI Responses API client.
+openai==3.16.2
+
+# Neuron simulation (Hodgkin-Huxley model, see app/simulation/hh_model.py).
+# cython is Brian2's optional-but-required dependency for its C++ codegen
+# target (app/simulation/codegen_target.py) — the Docker image's
+# build-essential/gcc install (see Dockerfile) is what actually lets that
+# target compile; the native Windows dev venv has the package but no
+# compiler, so it falls back to the numpy target there (see that module).
+brian2==2.10.1
+cython==3.1.3
+numpy==2.3.4
+
+pytest==8.4.1
+httpx==0.28.1
+
+# 연구소(Lab) — 네트워크 위상 분석 (docs/34). 실제 커넥톰 그래프에 표준
+# 그래프 이론 지표(중심성/모듈성/리치클럽 등)를 계산하는 데 사용.
+# scipy는 networkx.pagerank의 기본(scipy 기반) 구현이 실제로 요구하는
+# 숨은 의존성 -- 네이티브 dev venv에는 다른 패키지(scikit-image 등,
+# scripts/requirements-build.txt 소속)를 통해 이미 깔려 있어서 로컬
+# 테스트는 통과했지만, Docker 이미지에는 없어서 실제로 500 에러가
+# 났다(라이브 검증 중 실제로 잡힌 버그, docs/34에 기록) -- 반드시
+# 명시적으로 선언해야 함.
+networkx==3.7
+scipy==1.18.1

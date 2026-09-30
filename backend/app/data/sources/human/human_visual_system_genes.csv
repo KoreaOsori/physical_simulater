@@ -1,0 +1,136 @@
+gene_id,symbol,chromosome,map_location,description,type_of_gene,go_tags
+24,ABCA4,1,1p22.1,ATP binding cassette subfamily A member 4,protein-coding,visual_perception
+314,AOC2,17,17q21.31,amine oxidase copper containing 2,protein-coding,visual_perception
+407,ARR3,X,Xq13.1,arrestin 3,protein-coding,visual_perception
+583,BBS2,16,16q13,Bardet-Biedl syndrome 2,protein-coding,visual_perception
+611,OPN1SW,7,7q32.1,"opsin 1, short wave sensitive",protein-coding,visual_perception
+778,CACNA1F,X,Xp11.23,calcium voltage-gated channel subunit alpha1 F,protein-coding,visual_perception
+1121,CHM,X,Xq21.2,CHM Rab escort protein,protein-coding,visual_perception
+1141,CHRNB2,1,1q21.3,cholinergic receptor nicotinic beta 2 subunit,protein-coding,visual_perception
+1258,CNGB1,16,16q21,cyclic nucleotide gated channel subunit beta 1,protein-coding,visual_perception
+1259,CNGA1,4,4p12,cyclic nucleotide gated channel subunit alpha 1,protein-coding,visual_perception
+1261,CNGA3,2,2q11.2,cyclic nucleotide gated channel subunit alpha 3,protein-coding,visual_perception
+1277,COL1A1,17,17q21.33,collagen type I alpha 1 chain,protein-coding,visual_perception
+1280,COL2A1,12,12q13.11,collagen type II alpha 1 chain,protein-coding,visual_perception
+1301,COL11A1,1,1p21.1,collagen type XI alpha 1 chain,protein-coding,visual_perception
+1406,CRX,19,19q13.33,cone-rod homeobox,protein-coding,visual_perception
+1409,CRYAA,21,21q22.3,crystallin alpha A,protein-coding,visual_perception
+1411,CRYBA1,17,17q11.2,crystallin beta A1,protein-coding,visual_perception
+1412,CRYBA2,2,2q35,crystallin beta A2,protein-coding,visual_perception
+1413,CRYBA4,22,22q12.1,crystallin beta A4,protein-coding,visual_perception
+1414,CRYBB1,22,22q12.1,crystallin beta B1,protein-coding,visual_perception
+1415,CRYBB2,22,22q11.23,crystallin beta B2,protein-coding,visual_perception
+1417,CRYBB3,22,22q11.23,crystallin beta B3,protein-coding,visual_perception
+1418,CRYGA,2,2q33.3,crystallin gamma A,protein-coding,visual_perception
+1419,CRYGB,2,2q33.3,crystallin gamma B,protein-coding,visual_perception
+1420,CRYGC,2,2q33.3,crystallin gamma C,protein-coding,visual_perception
+1421,CRYGD,2,2q33.3,crystallin gamma D,protein-coding,visual_perception
+1427,CRYGS,3,3q27.3,crystallin gamma S,protein-coding,visual_perception
+1429,CRYZ,1,1p31.1,crystallin zeta,protein-coding,visual_perception
+2070,EYA4,6,6q23.2,EYA transcriptional coactivator and phosphatase 4,protein-coding,visual_perception
+2140,EYA3,1,1p35.3,EYA transcriptional coactivator and phosphatase 3,protein-coding,visual_perception
+2202,EFEMP1,2,2p16.1,EGF-like fibulin extracellular matrix protein 1,protein-coding,visual_perception
+2652,OPN1MW,X,Xq28,"opsin 1, medium wave sensitive",protein-coding,visual_perception
+2700,GJA3,13,13q12.11,gap junction protein alpha 3,protein-coding,visual_perception
+2779,GNAT1,3,3p21.31,G protein subunit alpha transducin 1,protein-coding,visual_perception
+2780,GNAT2,1,1p13.3,G protein subunit alpha transducin 2,protein-coding,visual_perception
+2918,GRM8,7,7q31.33,glutamate metabotropic receptor 8,protein-coding,visual_perception
+2978,GUCA1A,6,6p21.1,guanylate cyclase activator 1A,protein-coding,visual_perception
+2979,GUCA1B,6,6p21.1,guanylate cyclase activator 1B,protein-coding,visual_perception
+2986,GUCY2F,X,Xq22.3-q23,"guanylate cyclase 2F, retinal",protein-coding,visual_perception
+3000,GUCY2D,17,17p13.1,"guanylate cyclase 2D, retinal",protein-coding,visual_perception
+3617,IMPG1,6,6q14.1,interphotoreceptor matrix proteoglycan 1,protein-coding,visual_perception
+3801,KIFC3,16,16q21,kinesin family member C3,protein-coding,visual_perception
+3859,KRT12,17,17q21.2,keratin 12,protein-coding,visual_perception
+3983,ABLIM1,10,10q25.3,actin binding LIM protein 1,protein-coding,visual_perception
+4060,LUM,12,12q21.33,lumican,protein-coding,visual_perception
+4070,TACSTD2,1,1p32.1,tumor associated calcium signal transducer 2,protein-coding,visual_perception
+4308,TRPM1,15,15q13.3,transient receptor potential cation channel subfamily M member 1,protein-coding,visual_perception
+4647,MYO7A,11,11q13.5,myosin VIIA,protein-coding,visual_perception
+4649,MYO9A,15,15q23,myosin IXA,protein-coding,visual_perception
+4901,NRL,14,14q11.2-q12,neural retina leucine zipper,protein-coding,visual_perception
+4935,GPR143,X,Xp22.2,G protein-coupled receptor 143,protein-coding,visual_perception
+4942,OAT,10,10q26.13,ornithine aminotransferase,protein-coding,visual_perception
+4976,OPA1,3,3q29,OPA1 mitochondrial dynamin like GTPase,protein-coding,visual_perception
+4990,SIX6,14,14q23.1,SIX homeobox 6,protein-coding,visual_perception
+5145,PDE6A,5,5q32,phosphodiesterase 6A,protein-coding,visual_perception
+5146,PDE6C,10,10q23.33,phosphodiesterase 6C,protein-coding,visual_perception
+5147,PDE6D,2,2q37.1,phosphodiesterase 6D,protein-coding,visual_perception
+5148,PDE6G,17,17q25.3,phosphodiesterase 6G,protein-coding,visual_perception
+5149,PDE6H,12,12p12.3,phosphodiesterase 6H,protein-coding,visual_perception
+5158,PDE6B,4,4p16.3,phosphodiesterase 6B,protein-coding,visual_perception
+5306,PITPNA,17,17p13.3,phosphatidylinositol transfer protein alpha,protein-coding,visual_perception
+5459,POU4F3,5,5q32,POU class 4 homeobox 3,protein-coding,visual_perception
+5875,RABGGTA,14,14q12,Rab geranylgeranyltransferase subunit alpha,protein-coding,visual_perception
+5876,RABGGTB,1,1p31.1,Rab geranylgeranyltransferase subunit beta,protein-coding,visual_perception
+5949,RBP3,10,10q11.22,retinol binding protein 3,protein-coding,visual_perception
+5956,OPN1LW,X,Xq28,"opsin 1, long wave sensitive",protein-coding,visual_perception
+5957,RCVRN,17,17p13.1,recoverin,protein-coding,visual_perception
+5959,RDH5,12,12q13.2,retinol dehydrogenase 5,protein-coding,visual_perception
+5961,PRPH2,6,6p21.1,peripherin 2,protein-coding,visual_perception
+5995,RGR,10,10q23.1,retinal G protein coupled receptor,protein-coding,visual_perception
+6004,RGS16,1,1q25.3,regulator of G protein signaling 16,protein-coding,visual_perception
+6010,RHO,3,3q22.1,rhodopsin,protein-coding,visual_perception
+6011,GRK1,13,13q34,G protein-coupled receptor kinase 1,protein-coding,visual_perception
+6017,RLBP1,15,15q26.1,retinaldehyde binding protein 1,protein-coding,visual_perception
+6094,ROM1,11,11q12.3,retinal outer segment membrane protein 1,protein-coding,visual_perception
+6101,RP1,8,8q11.23-q12.1,RP1 axonemal microtubule associated,protein-coding,visual_perception
+6102,RP2,X,Xp11.3,RP2 activator of ARL3 GTPase,protein-coding,visual_perception
+6103,RPGR,X,Xp11.4,retinitis pigmentosa GTPase regulator,protein-coding,visual_perception
+6121,RPE65,1,1p31.3,retinoid isomerohydrolase RPE65,protein-coding,visual_perception
+6247,RS1,X,Xp22.13,retinoschisin 1,protein-coding,visual_perception
+6314,ATXN7,3,3p14.1,ataxin 7,protein-coding,visual_perception
+6425,SFRP5,10,10q24.2,secreted frizzled related protein 5,protein-coding,visual_perception
+6496,SIX3,2,2p21,SIX homeobox 3,protein-coding,visual_perception
+7045,TGFBI,5,5q31.1,transforming growth factor beta induced,protein-coding,visual_perception
+7054,TH,11,11p15.5,tyrosine hydroxylase,protein-coding,visual_perception
+7287,TULP1,6,6p21.31,TUB like protein 1,protein-coding,visual_perception
+7288,TULP2,19,19q13.33,TUB like protein 2,protein-coding,visual_perception
+7299,TYR,11,11q14.3,tyrosinase,protein-coding,visual_perception
+7439,BEST1,11,11q12.3,bestrophin 1,protein-coding,visual_perception
+7466,WFS1,4,4p16.1,wolframin ER transmembrane glycoprotein,protein-coding,visual_perception
+7546,ZIC2,13,13q32.3,Zic family zinc finger 2,protein-coding,visual_perception
+9187,SLC24A1,15,15q22.31,solute carrier family 24 member 1,protein-coding,visual_perception
+9249,DHRS3,1,1p36.21,dehydrogenase/reductase 3,protein-coding,visual_perception
+9364,RAB28,4,4p15.33,"RAB28, member RAS oncogene family",protein-coding,visual_perception
+9478,CABP1,12,12q24.31,calcium binding protein 1,protein-coding,visual_perception
+9626,GUCA1C,3,3q13.13,guanylate cyclase activator 1C,protein-coding,visual_perception
+10002,NR2E3,15,15q23,nuclear receptor subfamily 2 group E member 3,protein-coding,visual_perception
+10692,RRH,4,4q25,retinal pigment epithelium-derived rhodopsin homolog,protein-coding,visual_perception
+11272,PRR4,12,12p13.2,proline rich 4,protein-coding,visual_perception
+11281,POU6F2,7,7p14.1,POU class 6 homeobox 2,protein-coding,visual_perception
+22926,ATF6,1,1q23.3,activating transcription factor 6,protein-coding,visual_perception
+23746,AIPL1,17,17p13.2,AIP like 1 HSP90 co-chaperone,protein-coding,visual_perception
+24139,EML2,19,19q13.32,EMAP like 2,protein-coding,visual_perception
+25769,SLC24A2,9,9p22.1-p21.3,solute carrier family 24 member 2,protein-coding,visual_perception
+25794,FSCN2,17,17q25.3,"fascin actin-bundling protein 2, retinal",protein-coding,visual_perception
+25806,VAX2,2,2p13.3,ventral anterior homeobox 2,protein-coding,visual_perception
+30062,RAX,18,18q21.32,retina and anterior neural fold homeobox,protein-coding,visual_perception
+30813,VSX1,20,20p11.21,visual system homeobox 1,protein-coding,visual_perception
+50700,RDH8,19,19p13.2,retinol dehydrogenase 8,protein-coding,visual_perception
+50939,IMPG2,3,3q12.3,interphotoreceptor matrix proteoglycan 2,protein-coding,visual_perception
+51109,RDH11,14,14q24.1,retinol dehydrogenase 11,protein-coding,visual_perception
+51305,KCNK9,8,8q24.3,potassium two pore domain channel subfamily K member 9,protein-coding,visual_perception
+51475,CABP2,11,11q13.2,calcium binding protein 2,protein-coding,visual_perception
+54714,CNGB3,8,8q21.3,cyclic nucleotide gated channel subunit beta 3,protein-coding,visual_perception
+56344,CABP5,19,19q13.33,calcium binding protein 5,protein-coding,visual_perception
+57010,CABP4,11,11q13.2,calcium binding protein 4,protein-coding,visual_perception
+57282,SLC4A10,2,2q24.2,solute carrier family 4 member 10,protein-coding,visual_perception
+60506,NYX,X,Xp11.4,nyctalopin,protein-coding,visual_perception
+65217,PCDH15,10,10q21.1,protocadherin related 15,protein-coding,visual_perception
+80207,OPA3,19,19q13.32,outer mitochondrial membrane lipid metabolism regulator OPA3,protein-coding,visual_perception
+80781,COL18A1,21,21q22.3,collagen type XVIII alpha 1 chain,protein-coding,visual_perception
+94233,OPN4,10,10q23.2,opsin 4,protein-coding,visual_perception
+128338,DRAM2,1,1p13.3,DNA damage regulated autophagy modulator 2,protein-coding,visual_perception
+131544,CRYBG3,3,3q11.2,crystallin beta-gamma domain containing 3,protein-coding,visual_perception
+145226,RDH12,14,14q24.1,retinol dehydrogenase 12,protein-coding,visual_perception
+155051,CRYGN,7,7q36.1,crystallin gamma N,protein-coding,visual_perception
+157506,RDH10,8,8q21.11,retinol dehydrogenase 10,protein-coding,visual_perception
+158046,NXNL2,9,9q22.1,nucleoredoxin like 2,protein-coding,visual_perception
+221391,OPN5,6,6p12.3,opsin 5,protein-coding,visual_perception
+253635,GPATCH11,2,2p22.2,G-patch domain containing 11,protein-coding,visual_perception
+343035,RD3,1,1q32.3,RD3 regulator of GUCY2D,protein-coding,visual_perception
+440435,GPR179,17,17q12,G protein-coupled receptor 179,protein-coding,visual_perception
+728458,OPN1MW2,X,Xq28,"opsin 1, medium wave sensitive 2",protein-coding,visual_perception
+101060233,OPN1MW3,X,Xq28,"opsin 1, medium wave sensitive 3",protein-coding,visual_perception
+118142757,GUCA1ANB-GUCA1A,6,6p21.1,GUCA1ANB-GUCA1A readthrough,protein-coding,visual_perception

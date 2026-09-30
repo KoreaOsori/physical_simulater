@@ -1,0 +1,512 @@
+gene_id,symbol,chromosome,map_location,description,type_of_gene,go_tags
+43,ACHE,7,7q22.1,acetylcholinesterase (Yt blood group),protein-coding,nervous_system_development
+52,ACP1,2,2p25.3,acid phosphatase 1,protein-coding,chemical_synaptic_transmission
+86,ACTL6A,3,3q26.33,actin like 6A,protein-coding,nervous_system_development
+91,ACVR1B,12,12q13.13,activin A receptor type 1B,protein-coding,nervous_system_development
+134,ADORA1,1,1q32.1,adenosine A1 receptor,protein-coding,nervous_system_development
+163,AP2B1,17,17q12,adaptor related protein complex 2 subunit beta 1,protein-coding,chemical_synaptic_transmission
+182,JAG1,20,20p12.2,jagged canonical Notch ligand 1,protein-coding,nervous_system_development
+238,ALK,2,2p23.2-p23.1,ALK receptor tyrosine kinase,protein-coding,nervous_system_development
+273,AMPH,7,7p14.1,amphiphysin,protein-coding,chemical_synaptic_transmission
+287,ANK2,4,4q25-q26,ankyrin 2,protein-coding,nervous_system_development
+317,APAF1,12,12q23.1,apoptotic peptidase activating factor 1,protein-coding,nervous_system_development
+320,APBA1,9,9q21.12,amyloid beta precursor protein binding family A member 1,protein-coding,nervous_system_development|chemical_synaptic_transmission
+321,APBA2,15,15q13.1,amyloid beta precursor protein binding family A member 2,protein-coding,nervous_system_development|chemical_synaptic_transmission
+324,APC,5,5q22.2,APC regulator of Wnt signaling pathway,protein-coding,nervous_system_development
+333,APLP1,19,19q13.12,amyloid beta precursor like protein 1,protein-coding,nervous_system_development
+351,APP,21,21q21.3,amyloid beta precursor protein,protein-coding,chemical_synaptic_transmission
+393,ARHGAP4,X,Xq28,Rho GTPase activating protein 4,protein-coding,nervous_system_development
+429,ASCL1,12,12q23.2,achaete-scute family bHLH transcription factor 1,protein-coding,nervous_system_development
+558,AXL,19,19q13.2,AXL receptor tyrosine kinase,protein-coding,nervous_system_development
+627,BDNF,11,11p14.1,brain derived neurotrophic factor,protein-coding,nervous_system_development
+773,CACNA1A,19,19p13.13,calcium voltage-gated channel subunit alpha1 A,protein-coding,chemical_synaptic_transmission
+774,CACNA1B,9,9q34.3,calcium voltage-gated channel subunit alpha1 B,protein-coding,chemical_synaptic_transmission
+777,CACNA1E,1,1q25.3,calcium voltage-gated channel subunit alpha1 E,protein-coding,chemical_synaptic_transmission
+783,CACNB2,10,10p12.33-p12.31,calcium voltage-gated channel auxiliary subunit beta 2,protein-coding,chemical_synaptic_transmission
+869,CBLN1,16,16q12.1,cerebellin 1 precursor,protein-coding,nervous_system_development|chemical_synaptic_transmission
+928,CD9,12,12p13.31,CD9 molecule,protein-coding,nervous_system_development
+1020,CDK5,7,7q36.1,cyclin dependent kinase 5,protein-coding,chemical_synaptic_transmission
+1128,CHRM1,11,11q12.3,cholinergic receptor muscarinic 1,protein-coding,nervous_system_development|chemical_synaptic_transmission
+1129,CHRM2,7,7q33,cholinergic receptor muscarinic 2,protein-coding,nervous_system_development|chemical_synaptic_transmission
+1131,CHRM3,1,1q43,cholinergic receptor muscarinic 3,protein-coding,nervous_system_development|chemical_synaptic_transmission
+1132,CHRM4,11,11p11.2,cholinergic receptor muscarinic 4,protein-coding,chemical_synaptic_transmission
+1133,CHRM5,15,15q14,cholinergic receptor muscarinic 5,protein-coding,chemical_synaptic_transmission
+1136,CHRNA3,15,15q25.1,cholinergic receptor nicotinic alpha 3 subunit,protein-coding,nervous_system_development
+1137,CHRNA4,20,20q13.33,cholinergic receptor nicotinic alpha 4 subunit,protein-coding,chemical_synaptic_transmission
+1138,CHRNA5,15,15q25.1,cholinergic receptor nicotinic alpha 5 subunit,protein-coding,chemical_synaptic_transmission
+1139,CHRNA7,15,15q13.3,cholinergic receptor nicotinic alpha 7 subunit,protein-coding,chemical_synaptic_transmission
+1140,CHRNB1,17,17p13.1,cholinergic receptor nicotinic beta 1 subunit,protein-coding,chemical_synaptic_transmission
+1200,TPP1,11,11p15.4,tripeptidyl peptidase 1,protein-coding,nervous_system_development
+1271,CNTFR,9,9p13.3,ciliary neurotrophic factor receptor,protein-coding,nervous_system_development
+1325,CORT,1,1p36.22,cortistatin,protein-coding,chemical_synaptic_transmission
+1392,CRH,8,8q13.1,corticotropin releasing hormone,protein-coding,chemical_synaptic_transmission
+1400,CRMP1,4,4p16.2,collapsin response mediator protein 1,protein-coding,nervous_system_development
+1464,CSPG4,15,15q24.2,chondroitin sulfate proteoglycan 4,protein-coding,nervous_system_development
+1489,CTF1,16,16p11.2,cardiotrophin 1,protein-coding,nervous_system_development
+1621,DBH,9,9q34.2,dopamine beta-hydroxylase,protein-coding,chemical_synaptic_transmission
+1639,DCTN1,2,2p13.1,dynactin subunit 1,protein-coding,nervous_system_development
+1641,DCX,X,Xq23,doublecortin,protein-coding,nervous_system_development
+1678,TIMM8A,X,Xq22.1,translocase of inner mitochondrial membrane 8A,protein-coding,nervous_system_development
+1739,DLG1,3,3q29,discs large MAGUK scaffold protein 1,protein-coding,nervous_system_development|chemical_synaptic_transmission
+1740,DLG2,11,11q14.1,discs large MAGUK scaffold protein 2,protein-coding,nervous_system_development|chemical_synaptic_transmission
+1741,DLG3,X,Xq13.1,discs large MAGUK scaffold protein 3,protein-coding,nervous_system_development|chemical_synaptic_transmission
+1742,DLG4,17,17p13.1,discs large MAGUK scaffold protein 4,protein-coding,nervous_system_development|chemical_synaptic_transmission
+1749,DLX5,7,7q21.3,distal-less homeobox 5,protein-coding,nervous_system_development
+1750,DLX6,7,7q21.3,distal-less homeobox 6,protein-coding,nervous_system_development
+1808,DPYSL2,8,8p21.2,dihydropyrimidinase like 2,protein-coding,nervous_system_development
+1815,DRD4,11,11p15.5,dopamine receptor D4,protein-coding,chemical_synaptic_transmission
+1816,DRD5,4,4p16.1,dopamine receptor D5,protein-coding,chemical_synaptic_transmission
+1826,DSCAM,21,21q22.2,DS cell adhesion molecule,protein-coding,nervous_system_development
+1837,DTNA,18,18q12.1,dystrobrevin alpha,protein-coding,chemical_synaptic_transmission
+1859,DYRK1A,21,21q22.13,dual specificity tyrosine phosphorylation regulated kinase 1A,protein-coding,nervous_system_development
+1910,EDNRB,13,13q22.3,endothelin receptor type B,protein-coding,nervous_system_development
+1949,EFNB3,17,17p13.1,ephrin B3,protein-coding,nervous_system_development
+1952,CELSR2,1,1p13.3,cadherin EGF LAG seven-pass G-type receptor 2,protein-coding,nervous_system_development
+2033,EP300,22,22q13.2,EP300 lysine acetyltransferase,protein-coding,nervous_system_development
+2048,EPHB2,1,1p36.12,EPH receptor B2,protein-coding,nervous_system_development
+2055,CLN8,8,8p23.3,CLN8 transmembrane ER and ERGIC protein,protein-coding,nervous_system_development
+2063,NR2F6,19,19p13.11,nuclear receptor subfamily 2 group F member 6,protein-coding,nervous_system_development
+2066,ERBB4,2,2q34,erb-b2 receptor tyrosine kinase 4,protein-coding,nervous_system_development
+2173,FABP7,6,6q22.31,fatty acid binding protein 7,protein-coding,nervous_system_development
+2218,FKTN,9,9q31.2,fukutin,protein-coding,nervous_system_development
+2247,FGF2,4,4q28.1,fibroblast growth factor 2,protein-coding,nervous_system_development
+2250,FGF5,4,4q21.21,fibroblast growth factor 5,protein-coding,nervous_system_development
+2256,FGF11,17,17p13.1,fibroblast growth factor 11,protein-coding,nervous_system_development
+2257,FGF12,3,3q28-q29,fibroblast growth factor 12,protein-coding,nervous_system_development
+2258,FGF13,X,Xq26.3-q27.1,fibroblast growth factor 13,protein-coding,nervous_system_development
+2259,FGF14,13,13q33.1,fibroblast growth factor 14,protein-coding,nervous_system_development
+2335,FN1,2,2q35,fibronectin 1,protein-coding,nervous_system_development
+2558,GABRA5,15,15q12,gamma-aminobutyric acid type A receptor subunit alpha5,protein-coding,chemical_synaptic_transmission
+2561,GABRB2,5,5q34,gamma-aminobutyric acid type A receptor subunit beta2,protein-coding,chemical_synaptic_transmission
+2562,GABRB3,15,15q12,gamma-aminobutyric acid type A receptor subunit beta3,protein-coding,chemical_synaptic_transmission
+2563,GABRD,1,1p36.33,gamma-aminobutyric acid type A receptor subunit delta,protein-coding,chemical_synaptic_transmission
+2569,GABRR1,6,6q15,gamma-aminobutyric acid type A receptor subunit rho1,protein-coding,chemical_synaptic_transmission
+2570,GABRR2,6,6q15,gamma-aminobutyric acid type A receptor subunit rho2,protein-coding,chemical_synaptic_transmission
+2571,GAD1,2,2q31.1,glutamate decarboxylase 1,protein-coding,chemical_synaptic_transmission
+2572,GAD2,10,10p12.1,glutamate decarboxylase 2,protein-coding,chemical_synaptic_transmission
+2596,GAP43,3,3q13.31,growth associated protein 43,protein-coding,nervous_system_development
+2637,GBX2,2,2q37.2,gastrulation brain homeobox 2,protein-coding,nervous_system_development
+2668,GDNF,5,5p13.2,glial cell derived neurotrophic factor,protein-coding,nervous_system_development
+2674,GFRA1,10,10q25.3,GDNF family receptor alpha 1,protein-coding,nervous_system_development
+2675,GFRA2,8,8p21.3,GDNF family receptor alpha 2,protein-coding,nervous_system_development
+2676,GFRA3,5,5q31.2,GDNF family receptor alpha 3,protein-coding,nervous_system_development
+2705,GJB1,X,Xq13.1,gap junction protein beta 1,protein-coding,nervous_system_development
+2743,GLRB,4,4q32.1,glycine receptor beta,protein-coding,nervous_system_development|chemical_synaptic_transmission
+2764,GMFB,14,14q22.2,glia maturation factor beta,protein-coding,nervous_system_development
+2824,GPM6B,X,Xp22.2,glycoprotein M6B,protein-coding,nervous_system_development
+2831,NPBWR1,8,8q11.23,neuropeptides B and W receptor 1,protein-coding,chemical_synaptic_transmission
+2890,GRIA1,5,5q33.2,glutamate ionotropic receptor AMPA type subunit 1,protein-coding,chemical_synaptic_transmission
+2897,GRIK1,21,21q21.3,glutamate ionotropic receptor kainate type subunit 1,protein-coding,nervous_system_development|chemical_synaptic_transmission
+2898,GRIK2,6,6q16.3,glutamate ionotropic receptor kainate type subunit 2,protein-coding,chemical_synaptic_transmission
+2900,GRIK4,11,11q23.3,glutamate ionotropic receptor kainate type subunit 4,protein-coding,chemical_synaptic_transmission
+2902,GRIN1,9,9q34.3,glutamate ionotropic receptor NMDA type subunit 1,protein-coding,chemical_synaptic_transmission
+2903,GRIN2A,16,16p13.2,glutamate ionotropic receptor NMDA type subunit 2A,protein-coding,chemical_synaptic_transmission
+2904,GRIN2B,12,12p13.1,glutamate ionotropic receptor NMDA type subunit 2B,protein-coding,chemical_synaptic_transmission
+2911,GRM1,6,6q24.3,glutamate metabotropic receptor 1,protein-coding,chemical_synaptic_transmission
+2912,GRM2,3,3p21.2,glutamate metabotropic receptor 2,protein-coding,chemical_synaptic_transmission
+2913,GRM3,7,7q21.11-q21.12,glutamate metabotropic receptor 3,protein-coding,chemical_synaptic_transmission
+2914,GRM4,6,6p21.31,glutamate metabotropic receptor 4,protein-coding,chemical_synaptic_transmission
+2915,GRM5,11,11q14.2-q14.3,glutamate metabotropic receptor 5,protein-coding,chemical_synaptic_transmission
+2916,GRM6,5,5q35.3,glutamate metabotropic receptor 6,protein-coding,chemical_synaptic_transmission
+2917,GRM7,3,3p26.1,glutamate metabotropic receptor 7,protein-coding,chemical_synaptic_transmission
+2919,CXCL1,4,4q13.3,C-X-C motif chemokine ligand 1,protein-coding,nervous_system_development
+2937,GSS,20,20q11.22,glutathione synthetase,protein-coding,nervous_system_development
+3060,HCRT,17,17q21.2,hypocretin neuropeptide precursor,protein-coding,chemical_synaptic_transmission
+3061,HCRTR1,1,1p35.2,hypocretin receptor 1,protein-coding,chemical_synaptic_transmission
+3062,HCRTR2,6,6p12.1,hypocretin receptor 2,protein-coding,chemical_synaptic_transmission
+3084,NRG1,8,8p12,neuregulin 1,protein-coding,nervous_system_development
+3212,HOXB2,17,17q21.32,homeobox B2,protein-coding,nervous_system_development
+3269,HRH1,3,3p25.3,histamine receptor H1,protein-coding,chemical_synaptic_transmission
+3274,HRH2,5,5q35.2,histamine receptor H2,protein-coding,chemical_synaptic_transmission
+3280,HES1,3,3q29,hes family bHLH transcription factor 1,protein-coding,nervous_system_development
+3350,HTR1A,5,5q12.3,5-hydroxytryptamine receptor 1A,protein-coding,chemical_synaptic_transmission
+3351,HTR1B,6,6q14.1,5-hydroxytryptamine receptor 1B,protein-coding,chemical_synaptic_transmission
+3352,HTR1D,1,1p36.12,5-hydroxytryptamine receptor 1D,protein-coding,chemical_synaptic_transmission
+3354,HTR1E,6,6q14.3,5-hydroxytryptamine receptor 1E,protein-coding,chemical_synaptic_transmission
+3355,HTR1F,3,3p11.2-p11.1,5-hydroxytryptamine receptor 1F,protein-coding,chemical_synaptic_transmission
+3356,HTR2A,13,13q14.2,5-hydroxytryptamine receptor 2A,protein-coding,chemical_synaptic_transmission
+3357,HTR2B,2,2q37.1,5-hydroxytryptamine receptor 2B,protein-coding,chemical_synaptic_transmission
+3358,HTR2C,X,Xq23,5-hydroxytryptamine receptor 2C,protein-coding,chemical_synaptic_transmission
+3360,HTR4,5,5q32,5-hydroxytryptamine receptor 4,protein-coding,chemical_synaptic_transmission
+3361,HTR5A,7,7q36.2,5-hydroxytryptamine receptor 5A,protein-coding,chemical_synaptic_transmission
+3362,HTR6,1,1p36.13,5-hydroxytryptamine receptor 6,protein-coding,chemical_synaptic_transmission
+3363,HTR7,10,10q23.31,5-hydroxytryptamine receptor 7,protein-coding,chemical_synaptic_transmission
+3562,IL3,5,5q31.1,interleukin 3,protein-coding,nervous_system_development
+3624,INHBA,7,7p14.1,inhibin subunit beta A,protein-coding,nervous_system_development
+3749,KCNC4,1,1p13.3,potassium voltage-gated channel subfamily C member 4,protein-coding,chemical_synaptic_transmission
+3751,KCND2,7,7q31.31,potassium voltage-gated channel subfamily D member 2,protein-coding,chemical_synaptic_transmission
+3752,KCND3,1,1p13.2,potassium voltage-gated channel subfamily D member 3,protein-coding,chemical_synaptic_transmission
+3777,KCNK3,2,2p23.3,potassium two pore domain channel subfamily K member 3,protein-coding,chemical_synaptic_transmission
+3779,KCNMB1,5,5q35.1,potassium calcium-activated channel subfamily M regulatory beta subunit 1,protein-coding,chemical_synaptic_transmission
+3780,KCNN1,19,19p13.11,potassium calcium-activated channel subfamily N member 1,protein-coding,chemical_synaptic_transmission
+3785,KCNQ2,20,20q13.33,potassium voltage-gated channel subfamily Q member 2,protein-coding,nervous_system_development|chemical_synaptic_transmission
+3786,KCNQ3,8,8q24.22,potassium voltage-gated channel subfamily Q member 3,protein-coding,chemical_synaptic_transmission
+3798,KIF5A,12,12q13.3,kinesin family member 5A,protein-coding,chemical_synaptic_transmission
+3897,L1CAM,X,Xq28,L1 cell adhesion molecule,protein-coding,nervous_system_development
+3908,LAMA2,6,6q22.33,laminin subunit alpha 2,protein-coding,nervous_system_development
+3909,LAMA3,18,18q11.2,laminin subunit alpha 3,protein-coding,nervous_system_development
+3910,LAMA4,6,6q21,laminin subunit alpha 4,protein-coding,nervous_system_development
+3975,LHX1,17,17q12,LIM homeobox 1,protein-coding,nervous_system_development
+3984,LIMK1,7,7q11.23,LIM domain kinase 1,protein-coding,nervous_system_development
+4034,LRCH4,7,7q22.1,leucine rich repeats and calponin homology domain containing 4,protein-coding,nervous_system_development
+4040,LRP6,12,12p13.2,LDL receptor related protein 6,protein-coding,nervous_system_development|chemical_synaptic_transmission
+4041,LRP5,11,11q13.2,LDL receptor related protein 5,protein-coding,nervous_system_development
+4045,LSAMP,3,3q13.31,limbic system associated membrane protein,protein-coding,nervous_system_development
+4062,LY6H,8,8q24.3,lymphocyte antigen 6 family member H,protein-coding,nervous_system_development
+4099,MAG,19,19q13.12,myelin associated glycoprotein,protein-coding,nervous_system_development
+4131,MAP1B,5,5q13.2,microtubule associated protein 1B,protein-coding,nervous_system_development
+4154,MBNL1,3,3q25.1-q25.2,muscleblind like splicing regulator 1,protein-coding,nervous_system_development
+4155,MBP,18,18q23,myelin basic protein,protein-coding,chemical_synaptic_transmission
+4192,MDK,11,11p11.2,midkine,protein-coding,nervous_system_development
+4208,MEF2C,5,5q14.3,myocyte enhancer factor 2C,protein-coding,nervous_system_development
+4287,ATXN3,14,14q32.12,ataxin 3,protein-coding,nervous_system_development|chemical_synaptic_transmission
+4336,MOBP,3,3p22.1,myelin associated oligodendrocyte basic protein,protein-coding,nervous_system_development
+4359,MPZ,1,1q23.3,myelin protein zero,protein-coding,chemical_synaptic_transmission
+4440,MSI1,12,12q24.31,musashi RNA binding protein 1,protein-coding,nervous_system_development
+4486,MST1R,3,3p21.31,macrophage stimulating 1 receptor,protein-coding,nervous_system_development
+4544,MTNR1B,11,11q14.3,melatonin receptor 1B,protein-coding,chemical_synaptic_transmission
+4548,MTR,1,1q43,5-methyltetrahydrofolate-homocysteine methyltransferase,protein-coding,nervous_system_development
+4669,NAGLU,17,17q21.2,N-acetyl-alpha-glucosaminidase,protein-coding,nervous_system_development
+4671,NAIP,5,5q13.2,NLR family apoptosis inhibitory protein,protein-coding,nervous_system_development
+4681,NBL1,1,1p36.13,"NBL1, DAN family BMP antagonist",protein-coding,nervous_system_development
+4693,NDP,X,Xp11.3,norrin cystine knot growth factor NDP,protein-coding,nervous_system_development
+4729,NDUFV2,18,18p11.22,NADH:ubiquinone oxidoreductase core subunit V2,protein-coding,nervous_system_development
+4745,NELL1,11,11p15.1,neural EGFL like 1,protein-coding,nervous_system_development
+4760,NEUROD1,2,2q31.3,neuronal differentiation 1,protein-coding,nervous_system_development
+4761,NEUROD2,17,17q12,neuronal differentiation 2,protein-coding,nervous_system_development
+4762,NEUROG1,5,5q31.1,neurogenin 1,protein-coding,nervous_system_development
+4814,NINJ1,9,9q22.31,ninjurin 1,protein-coding,nervous_system_development
+4815,NINJ2,12,12p13.33,ninjurin 2,protein-coding,nervous_system_development
+4852,NPY,7,7p15.3,neuropeptide Y,protein-coding,chemical_synaptic_transmission
+4853,NOTCH2,1,1p12,notch receptor 2,protein-coding,nervous_system_development
+4857,NOVA1,14,14q12,NOVA alternative splicing regulator 1,protein-coding,nervous_system_development
+4882,NPR2,9,9p13.3,natriuretic peptide receptor 2,protein-coding,chemical_synaptic_transmission
+4884,NPTX1,17,17q25.3,neuronal pentraxin 1,protein-coding,chemical_synaptic_transmission
+4885,NPTX2,7,7q22.1,neuronal pentraxin 2,protein-coding,chemical_synaptic_transmission
+4889,NPY5R,4,4q32.2,neuropeptide Y receptor Y5,protein-coding,chemical_synaptic_transmission
+4900,NRGN,11,11q24.2,neurogranin,protein-coding,nervous_system_development
+4902,NRTN,19,19p13.3,neurturin,protein-coding,nervous_system_development
+4908,NTF3,12,12p13.31,neurotrophin 3,protein-coding,nervous_system_development
+4923,NTSR1,20,20q13.33,neurotensin receptor 1,protein-coding,chemical_synaptic_transmission
+4975,OMP,11,11q13.5,olfactory marker protein,protein-coding,chemical_synaptic_transmission
+4983,OPHN1,X,Xq12,oligophrenin 1,protein-coding,nervous_system_development
+4986,OPRK1,8,8q11.23,opioid receptor kappa 1,protein-coding,chemical_synaptic_transmission
+5026,P2RX5,17,17p13.2,purinergic receptor P2X 5,protein-coding,nervous_system_development
+5048,PAFAH1B1,17,17p13.3,platelet activating factor acetylhydrolase 1b regulatory subunit 1,protein-coding,nervous_system_development|chemical_synaptic_transmission
+5050,PAFAH1B3,19,19q13.2,platelet activating factor acetylhydrolase 1b catalytic subunit 3,protein-coding,nervous_system_development
+5076,PAX2,10,10q24.31,paired box 2,protein-coding,nervous_system_development
+5077,PAX3,2,2q36.1,paired box 3,protein-coding,nervous_system_development
+5079,PAX5,9,9p13.2,paired box 5,protein-coding,nervous_system_development
+5080,PAX6,11,11p13,paired box 6,protein-coding,nervous_system_development
+5081,PAX7,1,1p36.13,paired box 7,protein-coding,nervous_system_development
+5097,PCDH1,5,5q31.3,protocadherin 1,protein-coding,nervous_system_development
+5100,PCDH8,13,13q14.3,protocadherin 8,protein-coding,chemical_synaptic_transmission
+5126,PCSK2,20,20p12.1,proprotein convertase subtilisin/kexin type 2,protein-coding,nervous_system_development
+5354,PLP1,X,Xq22.2,proteolipid protein 1,protein-coding,chemical_synaptic_transmission
+5362,PLXNA2,1,1q32.2,plexin A2,protein-coding,nervous_system_development
+5367,PMCH,12,12q23.2,pro-melanin concentrating hormone,protein-coding,chemical_synaptic_transmission
+5368,PNOC,8,8p21.1,prepronociceptin,protein-coding,chemical_synaptic_transmission
+5370,PMCHL2,5,5q13.2,pro-melanin concentrating hormone like 2 (pseudogene),pseudo,chemical_synaptic_transmission
+5376,PMP22,17,17p12,peripheral myelin protein 22,protein-coding,nervous_system_development|chemical_synaptic_transmission
+5454,POU3F2,6,6q16.1,POU class 3 homeobox 2,protein-coding,nervous_system_development
+5528,PPP2R5D,6,6p21.1,protein phosphatase 2 regulatory subunit B'delta,protein-coding,nervous_system_development
+5538,PPT1,1,1p34.2,palmitoyl-protein thioesterase 1,protein-coding,nervous_system_development
+5573,PRKAR1A,17,17q24.2,protein kinase cAMP-dependent type I regulatory subunit alpha,protein-coding,chemical_synaptic_transmission
+5575,PRKAR1B,7,7p22.3,protein kinase cAMP-dependent type I regulatory subunit beta,protein-coding,chemical_synaptic_transmission
+5576,PRKAR2A,3,3p21.31,protein kinase cAMP-dependent type II regulatory subunit alpha,protein-coding,chemical_synaptic_transmission
+5577,PRKAR2B,7,7q22.3,protein kinase cAMP-dependent type II regulatory subunit beta,protein-coding,chemical_synaptic_transmission
+5582,PRKCG,19,19q13.42,protein kinase C gamma,protein-coding,chemical_synaptic_transmission
+5594,MAPK1,22,22q11.22,mitogen-activated protein kinase 1,protein-coding,chemical_synaptic_transmission
+5623,PSPN,19,19p13.3,persephin,protein-coding,nervous_system_development
+5626,PROP1,5,5q35.3,PROP paired-like homeobox 1,protein-coding,nervous_system_development
+5631,PRPS1,X,Xq22.3,phosphoribosyl pyrophosphate synthetase 1,protein-coding,nervous_system_development
+5764,PTN,7,7q33,pleiotrophin,protein-coding,nervous_system_development
+5789,PTPRD,9,9p24.1-p23,protein tyrosine phosphatase receptor type D,protein-coding,nervous_system_development
+5792,PTPRF,1,1p34.2,protein tyrosine phosphatase receptor type F,protein-coding,nervous_system_development
+5913,RAPSN,11,11p11.2,receptor associated protein of the synapse,protein-coding,chemical_synaptic_transmission
+5979,RET,10,10q11.21,ret proto-oncogene,protein-coding,nervous_system_development
+6014,RIT2,18,18q12.3,Ras like without CAAX 2,protein-coding,chemical_synaptic_transmission
+6091,ROBO1,3,3p12.3,roundabout guidance receptor 1,protein-coding,nervous_system_development
+6195,RPS6KA1,1,1p36.11,ribosomal protein S6 kinase A1,protein-coding,chemical_synaptic_transmission
+6196,RPS6KA2,6,6q27,ribosomal protein S6 kinase A2,protein-coding,chemical_synaptic_transmission
+6197,RPS6KA3,X,Xp22.12,ribosomal protein S6 kinase A3,protein-coding,chemical_synaptic_transmission
+6256,RXRA,9,9q34.2,retinoid X receptor alpha,protein-coding,nervous_system_development
+6257,RXRB,6,6p21.32,retinoid X receptor beta,protein-coding,nervous_system_development
+6258,RXRG,1,1q23.3,retinoid X receptor gamma,protein-coding,nervous_system_development
+6326,SCN2A,2,2q24.3,sodium voltage-gated channel alpha subunit 2,protein-coding,nervous_system_development
+6327,SCN2B,11,11q23.3,sodium voltage-gated channel beta subunit 2,protein-coding,nervous_system_development|chemical_synaptic_transmission
+6386,SDCBP,8,8q12.1,syndecan binding protein,protein-coding,chemical_synaptic_transmission
+6389,SDHA,5,5p15.33,succinate dehydrogenase complex flavoprotein subunit A,protein-coding,nervous_system_development
+6474,SHOX2,3,3q25.32,SHOX homeobox 2,protein-coding,nervous_system_development
+6477,SIAH1,16,16q12.1,siah E3 ubiquitin protein ligase 1,protein-coding,nervous_system_development
+6492,SIM1,6,6q16.3,SIM bHLH transcription factor 1,protein-coding,nervous_system_development
+6493,SIM2,21,21q22.13,SIM bHLH transcription factor 2,protein-coding,nervous_system_development
+6505,SLC1A1,9,9p24.2,solute carrier family 1 member 1,protein-coding,chemical_synaptic_transmission
+6506,SLC1A2,11,11p13,solute carrier family 1 member 2,protein-coding,chemical_synaptic_transmission
+6507,SLC1A3,5,5p13.2,solute carrier family 1 member 3,protein-coding,chemical_synaptic_transmission
+6511,SLC1A6,19,19p13.12,solute carrier family 1 member 6,protein-coding,chemical_synaptic_transmission
+6529,SLC6A1,3,3p25.3,solute carrier family 6 member 1,protein-coding,chemical_synaptic_transmission
+6530,SLC6A2,16,16q12.2,solute carrier family 6 member 2,protein-coding,chemical_synaptic_transmission
+6571,SLC18A2,10,10q25.3,solute carrier family 18 member A2,protein-coding,chemical_synaptic_transmission
+6572,SLC18A3,10,10q11.23,solute carrier family 18 member A3,protein-coding,chemical_synaptic_transmission
+6597,SMARCA4,19,19p13.2,SWI/SNF related BAF chromatin remodeling complex subunit ATPase 4,protein-coding,nervous_system_development
+6609,SMPD1,11,11p15.4,sphingomyelin phosphodiesterase 1,protein-coding,nervous_system_development
+6616,SNAP25,20,20p12.2,synaptosome associated protein 25,protein-coding,chemical_synaptic_transmission
+6620,SNCB,5,5q35.2,synuclein beta,protein-coding,chemical_synaptic_transmission
+6623,SNCG,10,10q23.2,synuclein gamma,protein-coding,chemical_synaptic_transmission
+6659,SOX4,6,6p22.3,SRY-box transcription factor 4,protein-coding,nervous_system_development
+6664,SOX11,2,2p25.2,SRY-box transcription factor 11,protein-coding,nervous_system_development
+6687,SPG7,16,16q24.3,"SPG7 matrix AAA peptidase subunit, paraplegin",protein-coding,nervous_system_development
+6695,SPOCK1,5,5q31.2,"SPARC (osteonectin), cwcv and kazal like domains proteoglycan 1",protein-coding,nervous_system_development
+6750,SST,3,3q27.3,somatostatin,protein-coding,chemical_synaptic_transmission
+6774,STAT3,17,17q21.2,signal transducer and activator of transcription 3,protein-coding,nervous_system_development
+6853,SYN1,X,Xp11.3-p11.23,synapsin I,protein-coding,chemical_synaptic_transmission
+6854,SYN2,3,3p25.2,synapsin II,protein-coding,chemical_synaptic_transmission
+6856,SYPL1,7,7q22.3,synaptophysin like 1,protein-coding,chemical_synaptic_transmission
+6857,SYT1,12,12q21.2,synaptotagmin 1,protein-coding,chemical_synaptic_transmission
+6861,SYT5,19,19q13.42|11p,synaptotagmin 5,protein-coding,chemical_synaptic_transmission
+6938,TCF12,15,15q21.3,transcription factor 12,protein-coding,nervous_system_development
+7020,TFAP2A,6,6p24.3,transcription factor AP-2 alpha,protein-coding,nervous_system_development
+7021,TFAP2B,6,6p12.3,transcription factor AP-2 beta,protein-coding,nervous_system_development
+7025,NR2F1,5,5q15,nuclear receptor subfamily 2 group F member 1,protein-coding,nervous_system_development
+7026,NR2F2,15,15q26.2,nuclear receptor subfamily 2 group F member 2,protein-coding,nervous_system_development
+7046,TGFBR1,9,9q22.33,transforming growth factor beta receptor 1,protein-coding,nervous_system_development
+7048,TGFBR2,3,3p24.1,transforming growth factor beta receptor 2,protein-coding,nervous_system_development
+7101,NR2E1,6,6q21,nuclear receptor subfamily 2 group E member 1,protein-coding,nervous_system_development
+7143,TNR,1,1q25.1,tenascin R,protein-coding,nervous_system_development
+7182,NR2C2,3,3p25.1,nuclear receptor subfamily 2 group C member 2,protein-coding,nervous_system_development
+7224,TRPC5,X,Xq23,transient receptor potential cation channel subfamily C member 5,protein-coding,nervous_system_development
+7301,TYRO3,15,15q15.1,TYRO3 protein tyrosine kinase,protein-coding,nervous_system_development
+7368,UGT8,4,4q26,UDP glycosyltransferase 8,protein-coding,nervous_system_development
+7422,VEGFA,6,6p21.1,vascular endothelial growth factor A,protein-coding,nervous_system_development
+7436,VLDLR,9,9p24.2,very low density lipoprotein receptor,protein-coding,nervous_system_development
+7479,WNT8B,10,10q24.31,Wnt family member 8B,protein-coding,nervous_system_development
+7849,PAX8,2,2q14.1,paired box 8,protein-coding,nervous_system_development
+7903,ST8SIA4,5,5q21.1,"ST8 alpha-N-acetyl-neuraminide alpha-2,8-sialyltransferase 4",protein-coding,nervous_system_development
+8110,DPF3,14,14q24.2,double PHD fingers 3,protein-coding,nervous_system_development
+8128,ST8SIA2,15,15q26.1,"ST8 alpha-N-acetyl-neuraminide alpha-2,8-sialyltransferase 2",protein-coding,nervous_system_development
+8193,DPF1,19,19q13.2,double PHD fingers 1,protein-coding,nervous_system_development
+8220,ESS2,22,22q11.21|22q11.2,ess-2 spliceosome associated protein,protein-coding,nervous_system_development
+8224,SYN3,22,22q12.3,synapsin III,protein-coding,chemical_synaptic_transmission
+8293,SERF1A,5,5q13.2,small EDRK-rich factor 1A,protein-coding,nervous_system_development
+8326,FZD9,7,7q11.23,frizzled class receptor 9,protein-coding,nervous_system_development
+8403,SOX14,3,3q22.3,SRY-box transcription factor 14,protein-coding,nervous_system_development
+8447,DOC2B,17,17p13.3,double C2 domain beta,protein-coding,chemical_synaptic_transmission
+8448,DOC2A,16,16p11.2,double C2 domain alpha,protein-coding,nervous_system_development|chemical_synaptic_transmission
+8463,TEAD2,19,19q13.33,TEA domain transcription factor 2,protein-coding,nervous_system_development
+8484,GALR3,22,22q13.1,galanin receptor 3,protein-coding,chemical_synaptic_transmission
+8506,CNTNAP1,17,17q21.2,contactin associated protein 1,protein-coding,nervous_system_development
+8507,ENC1,5,5q13.3,ectodermal-neural cortex 1,protein-coding,nervous_system_development
+8620,NPFF,12,12q13.13,neuropeptide FF-amide peptide precursor,protein-coding,chemical_synaptic_transmission
+8787,RGS9,17,17q24.1,regulator of G protein signaling 9,protein-coding,nervous_system_development
+8822,FGF17,8,8p21.3,fibroblast growth factor 17,protein-coding,nervous_system_development
+8861,LDB1,10,10q24.32,LIM domain binding 1,protein-coding,nervous_system_development
+8927,BSN,3,3p21.31,bassoon presynaptic cytomatrix protein,protein-coding,chemical_synaptic_transmission
+8973,CHRNA6,8,8p11.21,cholinergic receptor nicotinic alpha 6 subunit,protein-coding,chemical_synaptic_transmission
+8997,KALRN,3,3q21.1-q21.2,kalirin RhoGEF kinase,protein-coding,nervous_system_development
+9001,HAP1,17,17q21.2,huntingtin associated protein 1,protein-coding,chemical_synaptic_transmission
+9037,SEMA5A,5,5p15.31,semaphorin 5A,protein-coding,nervous_system_development
+9048,ARTN,1,1p34.1,artemin,protein-coding,nervous_system_development
+9079,LDB2,4,4p15.32,LIM domain binding 2,protein-coding,nervous_system_development
+9094,UNC119,17,17q11.2,unc-119 lipid binding chaperone,protein-coding,chemical_synaptic_transmission
+9148,NEURL1,10,10q24.33,neuralized E3 ubiquitin protein ligase 1,protein-coding,nervous_system_development
+9152,SLC6A5,11,11p15.1,solute carrier family 6 member 5,protein-coding,chemical_synaptic_transmission
+9201,DCLK1,13,13q13.3,doublecortin like kinase 1,protein-coding,nervous_system_development
+9211,LGI1,10,10q23.33,leucine rich glioma inactivated 1,protein-coding,nervous_system_development
+9229,DLGAP1,18,18p11.31,DLG associated protein 1,protein-coding,chemical_synaptic_transmission
+9241,NOG,17,17q22,noggin,protein-coding,nervous_system_development
+9253,NUMBL,19,19q13.2,NUMB like endocytic adaptor protein,protein-coding,nervous_system_development
+9350,CER1,9,9p22.3,"cerberus 1, DAN family BMP antagonist",protein-coding,nervous_system_development
+9369,NRXN3,14,14q24.3-q31.1,neurexin 3,protein-coding,nervous_system_development
+9378,NRXN1,2,2p16.3,neurexin 1,protein-coding,nervous_system_development|chemical_synaptic_transmission
+9379,NRXN2,11,11q13.1,neurexin 2,protein-coding,nervous_system_development|chemical_synaptic_transmission
+9445,ITM2B,13,13q14.2,integral membrane protein 2B,protein-coding,nervous_system_development
+9456,HOMER1,5,5q14.1,homer scaffold protein 1,protein-coding,chemical_synaptic_transmission
+9495,AKAP5,14,14q23.3,A-kinase anchoring protein 5,protein-coding,chemical_synaptic_transmission
+9542,NRG2,5,5q31.2,neuregulin 2,protein-coding,nervous_system_development
+9546,APBA3,19,19p13.3,amyloid beta precursor protein binding family A member 3,protein-coding,chemical_synaptic_transmission
+9568,GABBR2,9,9q22.33,gamma-aminobutyric acid type B receptor subunit 2,protein-coding,chemical_synaptic_transmission
+9615,GDA,9,9q21.13,guanine deaminase,protein-coding,nervous_system_development
+9620,CELSR1,22,22q13.31,cadherin EGF LAG seven-pass G-type receptor 1,protein-coding,nervous_system_development
+9637,FEZ2,2,2p22.2,fasciculation and elongation protein zeta 2,protein-coding,nervous_system_development
+9638,FEZ1,11,11q24.2,fasciculation and elongation protein zeta 1,protein-coding,nervous_system_development
+9752,PCDHA9,5,5q31.3,protocadherin alpha 9,protein-coding,nervous_system_development
+9759,HDAC4,2,2q37.3,histone deacetylase 4,protein-coding,nervous_system_development
+9771,RAPGEF5,7,7p15.3,Rap guanine nucleotide exchange factor 5,protein-coding,nervous_system_development
+9839,ZEB2,2,2q22.3,zinc finger E-box binding homeobox 2,protein-coding,nervous_system_development
+9899,SV2B,15,15q26.1,synaptic vesicle glycoprotein 2B,protein-coding,chemical_synaptic_transmission
+9900,SV2A,1,1q21.2,synaptic vesicle glycoprotein 2A,protein-coding,chemical_synaptic_transmission
+9901,SRGAP3,3,3p25.3,SLIT-ROBO Rho GTPase activating protein 3,protein-coding,nervous_system_development
+9965,FGF19,11,11q13.3,fibroblast growth factor 19,protein-coding,nervous_system_development
+10141,LINC01587,4,4p16.2,long independently transcribed non-coding RNA 1587,ncRNA,nervous_system_development
+10142,AKAP9,7,7q21.2,A-kinase anchoring protein 9,protein-coding,chemical_synaptic_transmission
+10178,TENM1,X,Xq25,teneurin transmembrane protein 1,protein-coding,nervous_system_development
+10220,GDF11,12,12q13.2,growth differentiation factor 11,protein-coding,nervous_system_development
+10280,SIGMAR1,9,9p13.3,sigma receptor chaperone 1,protein-coding,nervous_system_development
+10297,APC2,19,19p13.3,APC regulator of Wnt signaling pathway 2,protein-coding,nervous_system_development
+10380,BPNT1,1,1q41,"3'(2'), 5'-bisphosphate nucleotidase 1",protein-coding,nervous_system_development
+10439,OLFM1,9,9q34.3,olfactomedin 1,protein-coding,nervous_system_development
+10461,MERTK,2,2q13,"MER proto-oncogene, tyrosine kinase",protein-coding,nervous_system_development
+10497,UNC13B,9,9p13.3,unc-13 homolog B,protein-coding,chemical_synaptic_transmission
+10505,SEMA4F,2,2p13.1,ssemaphorin 4F,protein-coding,nervous_system_development
+10523,CHERP,19,19p13.11,calcium homeostasis endoplasmic reticulum protein,protein-coding,nervous_system_development
+10570,DPYSL4,10,10q26.3,dihydropyrimidinase like 4,protein-coding,nervous_system_development
+10586,MAB21L2,4,4q31.3,mab-21 like 2,protein-coding,nervous_system_development
+10612,TRIM3,11,11p15.4,tripartite motif containing 3,protein-coding,nervous_system_development
+10642,IGF2BP1,17,17q21.32,insulin like growth factor 2 mRNA binding protein 1,protein-coding,nervous_system_development
+10643,IGF2BP3,7,7p15.3,insulin like growth factor 2 mRNA binding protein 3,protein-coding,nervous_system_development
+10644,IGF2BP2,3,3q27.2,insulin like growth factor 2 mRNA binding protein 2,protein-coding,nervous_system_development
+10675,CSPG5,3,3p21.31,chondroitin sulfate proteoglycan 5,protein-coding,nervous_system_development
+10677,AVIL,12,12q14.1,advillin,protein-coding,nervous_system_development
+10718,NRG3,10,10q23.1,neuregulin 3,protein-coding,nervous_system_development
+10755,GIPC1,19,19p13.12,GIPC PDZ domain containing family member 1,protein-coding,chemical_synaptic_transmission
+10815,CPLX1,4,4p16.3,complexin 1,protein-coding,chemical_synaptic_transmission
+10858,CYP46A1,14,14q32.2,cytochrome P450 family 46 subfamily A member 1,protein-coding,nervous_system_development
+10868,USP20,9,9q34.11,ubiquitin specific peptidase 20,protein-coding,nervous_system_development
+10911,UTS2,1,1p36.23,urotensin 2,protein-coding,chemical_synaptic_transmission
+11245,GPR176,15,15q14-q15.1,G protein-coupled receptor 176,protein-coding,chemical_synaptic_transmission
+11255,HRH3,20,20q13.33,histamine receptor H3,protein-coding,chemical_synaptic_transmission
+11337,GABARAP,17,17p13.1,GABA type A receptor-associated protein,protein-coding,chemical_synaptic_transmission
+11341,SCRG1,4,4q34.1,stimulator of chondrogenesis 1,protein-coding,nervous_system_development
+22850,ADNP2,18,18q23,ADNP homeobox 2,protein-coding,nervous_system_development
+22871,NLGN1,3,3q26.31,neuroligin 1,protein-coding,nervous_system_development
+22987,SV2C,5,5q13.3,synaptic vesicle glycoprotein 2C,protein-coding,chemical_synaptic_transmission
+23025,UNC13A,19,19p13.11,unc-13 homolog A,protein-coding,chemical_synaptic_transmission
+23032,USP33,1,1p31.1,ubiquitin specific peptidase 33,protein-coding,nervous_system_development
+23040,MYT1L,2,2p25.3,myelin transcription factor 1 like,protein-coding,nervous_system_development
+23141,ANKLE2,12,12q24.33,ankyrin repeat and LEM domain containing 2,protein-coding,nervous_system_development
+23380,SRGAP2,1,1q32.1,SLIT-ROBO Rho GTPase activating protein 2,protein-coding,nervous_system_development
+23543,RBFOX2,22,22q12.3,RNA binding fox-1 homolog 2,protein-coding,nervous_system_development
+23566,LPAR3,1,1p22.3,lysophosphatidic acid receptor 3,protein-coding,chemical_synaptic_transmission
+23613,ZMYND8,20,20q13.12,zinc finger MYND-type containing 8,protein-coding,nervous_system_development
+25814,ATXN10,22,22q13.31,ataxin 10,protein-coding,nervous_system_development
+26047,CNTNAP2,7,7q35-q36.1,contactin associated protein 2,protein-coding,nervous_system_development
+26167,PCDHB5,5,5q31.3,protocadherin beta 5,protein-coding,nervous_system_development|chemical_synaptic_transmission
+26280,IL1RAPL2,X,Xq22.3,interleukin 1 receptor accessory protein like 2,protein-coding,nervous_system_development
+27111,SDCBP2,20,20p13,syndecan binding protein 2,protein-coding,nervous_system_development
+27115,PDE7B,6,6q23.3,phosphodiesterase 7B,protein-coding,chemical_synaptic_transmission
+27152,INTU,4,4q28.1,inturned planar cell polarity protein,protein-coding,nervous_system_development
+27185,DISC1,1,1q42.2,DISC1 scaffold protein,protein-coding,nervous_system_development
+27345,KCNMB4,12,12q15,potassium calcium-activated channel subfamily M regulatory beta subunit 4,protein-coding,chemical_synaptic_transmission
+29116,MYLIP,6,6p22.3,myosin regulatory light chain interacting protein,protein-coding,nervous_system_development
+29767,TMOD2,15,15q21.2,tropomodulin 2,protein-coding,nervous_system_development
+30819,KCNIP2,10,10q24.32,potassium voltage-gated channel interacting protein 2,protein-coding,chemical_synaptic_transmission
+30820,KCNIP1,5,5q35.1,potassium voltage-gated channel interacting protein 1,protein-coding,chemical_synaptic_transmission
+50488,MINK1,17,17p13.2,misshapen like kinase 1,protein-coding,chemical_synaptic_transmission
+50674,NEUROG3,10,10q22.1,neurogenin 3,protein-coding,nervous_system_development
+50861,STMN3,20,20q13.33,stathmin 3,protein-coding,nervous_system_development
+50937,CDON,11,11q24.2,"cell adhesion associated, oncogene regulated",protein-coding,nervous_system_development
+51057,WDPCP,2,2p15,WD repeat containing planar cell polarity effector,protein-coding,nervous_system_development
+51118,UTP11,1,1p34.3,UTP11 small subunit processome component,protein-coding,nervous_system_development
+51195,RAPGEFL1,17,17q21.1,Rap guanine nucleotide exchange factor like 1,protein-coding,nervous_system_development
+51232,CRIM1,2,2p22.2,cysteine rich transmembrane BMP regulator 1,protein-coding,nervous_system_development
+51299,NRN1,6,6p25.1,neuritin 1,protein-coding,nervous_system_development
+51412,ACTL6B,7,7q22.1,actin like 6B,protein-coding,nervous_system_development
+51466,EVL,14,14q32.2,Enah/Vasp-like,protein-coding,nervous_system_development
+54413,NLGN3,X,Xq13.1,neuroligin 3,protein-coding,chemical_synaptic_transmission
+54660,PCDHB18P,5,5q31.3,protocadherin beta 18 pseudogene,pseudo,nervous_system_development
+54715,RBFOX1,16,16p13.3,RNA binding fox-1 homolog 1,protein-coding,nervous_system_development
+54886,PLPPR1,9,9q31.1,phospholipid phosphatase related 1,protein-coding,nervous_system_development
+55201,MAP1S,19,19p13.11,microtubule associated protein 1S,protein-coding,nervous_system_development
+55773,TBC1D23,3,3q12.1-q12.2,TBC1 domain family member 23,protein-coding,nervous_system_development
+55777,MBD5,2,2q23.1,methyl-CpG binding domain protein 5,protein-coding,nervous_system_development
+55800,SCN3B,11,11q24.1,sodium voltage-gated channel beta subunit 3,protein-coding,nervous_system_development
+55906,ZC4H2,X,Xq11.2,zinc finger C4H2-type containing,protein-coding,nervous_system_development
+56098,PCDHGC4,5,5q31.3,"protocadherin gamma subfamily C, 4",protein-coding,nervous_system_development
+56121,PCDHB15,5,5q31.3,protocadherin beta 15,protein-coding,nervous_system_development
+56122,PCDHB14,5,5q31.3,protocadherin beta 14,protein-coding,nervous_system_development|chemical_synaptic_transmission
+56123,PCDHB13,5,5q31.3,protocadherin beta 13,protein-coding,nervous_system_development|chemical_synaptic_transmission
+56124,PCDHB12,5,5q31.3,protocadherin beta 12,protein-coding,nervous_system_development
+56125,PCDHB11,5,5q31.3,protocadherin beta 11,protein-coding,nervous_system_development|chemical_synaptic_transmission
+56126,PCDHB10,5,5q31.3,protocadherin beta 10,protein-coding,nervous_system_development|chemical_synaptic_transmission
+56127,PCDHB9,5,5q31.3,protocadherin beta 9,protein-coding,nervous_system_development|chemical_synaptic_transmission
+56128,PCDHB8,5,5q31.3,protocadherin beta 8,protein-coding,nervous_system_development
+56129,PCDHB7,5,5q31.3,protocadherin beta 7,protein-coding,nervous_system_development
+56130,PCDHB6,5,5q31.3,protocadherin beta 6,protein-coding,nervous_system_development|chemical_synaptic_transmission
+56131,PCDHB4,5,5q31.3,protocadherin beta 4,protein-coding,nervous_system_development|chemical_synaptic_transmission
+56132,PCDHB3,5,5q31.3,protocadherin beta 3,protein-coding,nervous_system_development|chemical_synaptic_transmission
+56133,PCDHB2,5,5q31.3,protocadherin beta 2,protein-coding,nervous_system_development|chemical_synaptic_transmission
+56134,PCDHAC2,5,5q31.3,"protocadherin alpha subfamily C, 2",protein-coding,nervous_system_development
+56135,PCDHAC1,5,5q31.3,"protocadherin alpha subfamily C, 1",protein-coding,nervous_system_development
+56136,PCDHA13,5,5q31.3,protocadherin alpha 13,protein-coding,nervous_system_development
+56137,PCDHA12,5,5q31.3,protocadherin alpha 12,protein-coding,nervous_system_development
+56138,PCDHA11,5,5q31.3,protocadherin alpha 11,protein-coding,nervous_system_development
+56139,PCDHA10,5,5q31.3,protocadherin alpha 10,protein-coding,nervous_system_development
+56140,PCDHA8,5,5q31.3,protocadherin alpha 8,protein-coding,nervous_system_development
+56141,PCDHA7,5,5q31.3,protocadherin alpha 7,protein-coding,nervous_system_development
+56142,PCDHA6,5,5q31.3,protocadherin alpha 6,protein-coding,nervous_system_development
+56143,PCDHA5,5,5q31.3,protocadherin alpha 5,protein-coding,nervous_system_development
+56144,PCDHA4,5,5q31.3,protocadherin alpha 4,protein-coding,nervous_system_development
+56145,PCDHA3,5,5q31.3,protocadherin alpha 3,protein-coding,nervous_system_development
+56146,PCDHA2,5,5q31.3,protocadherin alpha 2,protein-coding,nervous_system_development
+56147,PCDHA1,5,5q31.3,protocadherin alpha 1,protein-coding,nervous_system_development
+56896,DPYSL5,2,2p23.3,dihydropyrimidinase like 5,protein-coding,nervous_system_development
+57211,ADGRG6,6,6q24.2,adhesion G protein-coupled receptor G6,protein-coding,nervous_system_development
+57453,DSCAML1,11,11q23.3,DS cell adhesion molecule like 1,protein-coding,nervous_system_development
+57522,SRGAP1,12,12q14.2,SLIT-ROBO Rho GTPase activating protein 1,protein-coding,nervous_system_development
+57528,KCTD16,5,5q31.3,potassium channel tetramerization domain containing 16,protein-coding,nervous_system_development
+57556,SEMA6A,5,5q23.1,semaphorin 6A,protein-coding,nervous_system_development
+57634,EP400,12,12q24.33,E1A binding protein p400,protein-coding,nervous_system_development
+57717,PCDHB16,5,5q31.3,protocadherin beta 16,protein-coding,nervous_system_development|chemical_synaptic_transmission
+57787,MARK4,19,19q13.32,microtubule affinity regulating kinase 4,protein-coding,nervous_system_development
+57795,BRINP2,1,1q25.2,BMP/retinoic acid inducible neural specific 2,protein-coding,nervous_system_development
+58158,NEUROD4,12,12q13.2,neuronal differentiation 4,protein-coding,nervous_system_development
+59340,HRH4,18,18q11.2,histamine receptor H4,protein-coding,chemical_synaptic_transmission
+60412,EXOC4,7,7q33,exocyst complex component 4,protein-coding,chemical_synaptic_transmission
+63974,NEUROD6,7,7p14.3,neuronal differentiation 6,protein-coding,nervous_system_development
+64096,GFRA4,20,20p13,GDNF family receptor alpha 4,protein-coding,nervous_system_development
+64207,IRF2BPL,14,14q24.3,interferon regulatory factor 2 binding protein like,protein-coding,nervous_system_development
+64839,FBXL17,5,5q21.3,F-box and leucine rich repeat protein 17,protein-coding,nervous_system_development
+79937,CNTNAP3,9,9p12,contactin associated protein family member 3,protein-coding,nervous_system_development
+80023,NRSN2,20,20p13,neurensin 2,protein-coding,nervous_system_development
+80208,SPG11,15,15q21.1,"SPG11 vesicle trafficking associated, spatacsin",protein-coding,chemical_synaptic_transmission
+84059,ADGRV1,5,5q14.3,adhesion G protein-coupled receptor V1,protein-coding,nervous_system_development
+84073,MYCBPAP,17,17q21.33,MYCBP associated protein,protein-coding,chemical_synaptic_transmission
+84258,SYT3,19,19q13.33,synaptotagmin 3,protein-coding,chemical_synaptic_transmission
+84530,SRRM4,12,12q24.23,serine/arginine repetitive matrix 4,protein-coding,nervous_system_development
+84750,POFUT3,8,8p12,protein O-fucosyltransferase 3,protein-coding,nervous_system_development
+84902,CEP89,19,19q13.11,centrosomal protein 89,protein-coding,chemical_synaptic_transmission
+85445,CNTNAP4,16,16q23.1,contactin associated protein family member 4,protein-coding,nervous_system_development
+89795,NAV3,12,12q21.2,neuron navigator 3,protein-coding,nervous_system_development
+89796,NAV1,1,1q32.1,neuron navigator 1,protein-coding,nervous_system_development
+89797,NAV2,11,11p15.1,neuron navigator 2,protein-coding,nervous_system_development
+91653,BOC,3,3q13.2,"BOC cell adhesion associated, oncogene regulated",protein-coding,nervous_system_development
+91768,CABLES1,18,18q11.2,Cdk5 and Abl enzyme substrate 1,protein-coding,nervous_system_development
+92737,DNER,2,2q36.3,delta/notch like EGF repeat containing,protein-coding,nervous_system_development
+93185,IGSF8,1,1q23.2,immunoglobulin superfamily member 8,protein-coding,nervous_system_development
+94235,GNG8,19,19q13.32,G protein subunit gamma 8,protein-coding,nervous_system_development
+114794,ELFN2,22,22q13.1,extracellular leucine rich repeat and fibronectin type III domain containing 2,protein-coding,chemical_synaptic_transmission
+115207,KCTD12,13,13q22.3,potassium channel tetramerization domain containing 12,protein-coding,nervous_system_development
+123904,NRN1L,16,16q22.1,neuritin 1 like,protein-coding,nervous_system_development
+129684,CNTNAP5,2,2q14.3,contactin associated protein family member 5,protein-coding,nervous_system_development
+129831,RBM45,2,2q31.2,RNA binding motif protein 45,protein-coding,nervous_system_development
+130399,ACVR1C,2,2q24.1,activin A receptor type 1C,protein-coding,nervous_system_development
+133584,EGFLAM,5,5p13.2-p13.1,"EGF like, fibronectin type III and laminin G domains",protein-coding,nervous_system_development
+140767,NRSN1,6,6p22.3,neurensin 1,protein-coding,nervous_system_development
+143425,SYT9,11,11p15.4,synaptotagmin 9,protein-coding,chemical_synaptic_transmission
+146713,RBFOX3,17,17q25.3,RNA binding fox-1 homolog 3,protein-coding,nervous_system_development
+148281,SYT6,1,1p13.2,synaptotagmin 6,protein-coding,chemical_synaptic_transmission
+152330,CNTN4,3,3p26.3-p26.2,contactin 4,protein-coding,nervous_system_development
+157680,VPS13B,8,8q22.2,vacuolar protein sorting 13 homolog B,protein-coding,nervous_system_development
+158056,MAMDC4,9,9q34.3,MAM domain containing 4,protein-coding,nervous_system_development
+161357,MDGA2,14,14q21.3,MAM domain containing glycosylphosphatidylinositol anchor 2,protein-coding,nervous_system_development
+200959,GABRR3,3,3q11.2,gamma-aminobutyric acid type A receptor subunit rho3,protein-coding,chemical_synaptic_transmission
+266727,MDGA1,6,6p21.2,MAM domain containing glycosylphosphatidylinositol anchor 1,protein-coding,nervous_system_development
+284217,LAMA1,18,18p11.31,laminin subunit alpha 1,protein-coding,nervous_system_development
+285382,C3orf70,3,3q27.2,chromosome 3 open reading frame 70,protein-coding,nervous_system_development
+339479,BRINP3,1,1q31.1,BMP/retinoic acid inducible neural specific 3,protein-coding,nervous_system_development
+340990,OTOG,11,11p15.1,otogelin,protein-coding,nervous_system_development
+341359,SYT10,12,12p11.1,synaptotagmin 10,protein-coding,chemical_synaptic_transmission
+343472,BARHL2,1,1p22.2,BarH like homeobox 2,protein-coding,nervous_system_development
+375790,AGRN,1,1p36.33,agrin,protein-coding,nervous_system_development|chemical_synaptic_transmission
+386617,KCTD8,4,4p13,potassium channel tetramerization domain containing 8,protein-coding,nervous_system_development
+386724,AMIGO3,3,3p21.31,adhesion molecule with Ig like domain 3,protein-coding,nervous_system_development
+389400,GFRAL,6,6p12.1,GDNF family receptor alpha like,protein-coding,nervous_system_development
+392617,ELFN1,7,7p22.3,extracellular leucine rich repeat and fibronectin type III domain containing 1,protein-coding,chemical_synaptic_transmission
+440279,UNC13C,15,15q21.3,unc-13 homolog C,protein-coding,chemical_synaptic_transmission
+442891,MIR135B,1,1q32.1,microRNA 135b,ncRNA,nervous_system_development
+647135,SRGAP2B,1,1q21.1,SLIT-ROBO Rho GTPase activating protein 2B,protein-coding,nervous_system_development
+653464,SRGAP2C,1,1p11.2,SLIT-ROBO Rho GTPase activating protein 2C,protein-coding,nervous_system_development
+728492,SERF1B,5,5q13.2,small EDRK-rich factor 1B,protein-coding,nervous_system_development
+728577,CNTNAP3B,9,9p11.2,contactin associated protein family member 3B,protein-coding,nervous_system_development
+100532736,MICOS10-NBL1,1,1p36.13,MICOS10-NBL1 readthrough,protein-coding,nervous_system_development

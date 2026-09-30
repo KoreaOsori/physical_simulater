@@ -1,0 +1,4 @@
+gene_id,symbol,chromosome,map_location,description,type_of_gene
+627,BDNF,11,11p14.1,brain derived neurotrophic factor,protein-coding
+1385,CREB1,2,2q33.3,cAMP responsive element binding protein 1,protein-coding
+4915,NTRK2,9,9q21.33,neurotrophic receptor tyrosine kinase 2,protein-coding

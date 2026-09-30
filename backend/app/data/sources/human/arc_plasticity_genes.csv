@@ -1,0 +1,4 @@
+gene_id,symbol,chromosome,map_location,description,type_of_gene
+2904,GRIN2B,12,12p13.1,glutamate ionotropic receptor NMDA type subunit 2B,protein-coding
+815,CAMK2A,5,5q32,calcium/calmodulin dependent protein kinase II alpha,protein-coding
+23237,ARC,8,8q24.3,activity regulated cytoskeleton associated protein,protein-coding
