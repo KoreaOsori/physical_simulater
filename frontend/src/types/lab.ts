@@ -223,3 +223,145 @@ export interface VirtualFlyStepResponse {
   ticks: VirtualFlyTick[];
   state: VirtualFlyState;
 }
+
+// ---------- 손상-재조직 실험실 · 폐루프 재활 (docs/52) ----------
+
+export type ReorgStrategy = "none" | "local" | "concentrated" | "distributed" | "normative" | "random" | "tau";
+
+export interface ReorgLesion {
+  id: string;
+  name: string;
+  category: string;
+  size: number;
+}
+
+export interface ReorgMixture {
+  w1: number;
+  w2: number;
+  w3: number;
+  w4: number;
+}
+
+export interface ReorgReference {
+  strategy_map?: { w: number[]; best_effT: string; best_retained: string; table: Record<string, { effT: number; retained: number; eff0: number }> }[];
+  null_test?: Record<string, { label: string; real: number; null_mean: number; null_p2_5: number; null_p97_5: number; p_real_gt_null: number; n: number; hist: { edges: number[]; counts: number[] } }>;
+  notes?: string[];
+}
+
+export interface ReorgLabMeta {
+  lesions: ReorgLesion[];
+  strategies: ReorgStrategy[];
+  strategy_labels: Record<ReorgStrategy, string>;
+  mechanisms: Record<string, string>;
+  healthy_efficiency: number;
+  reference: ReorgReference | null;
+  honesty_note: string;
+}
+
+export interface ReorgLabRequest extends ReorgMixture {
+  lesion_id: string;
+  strategies: ReorgStrategy[];
+  epochs: number;
+  reps: number;
+  cascade_m: number;
+  seed: number;
+  tau: number;
+}
+
+export interface ReorgStrategyResult {
+  strategy: ReorgStrategy;
+  label: string;
+  edges_added: number;
+  efficiency: number;
+  loadmap_rho: number;
+  overload_frac: number;
+  cascade_survival: number;
+  wear_mean: number[];
+  wear_sd: number[];
+}
+
+export interface ReorgLabResponse {
+  lesion_id: string;
+  lesion_name: string;
+  lesion_size: number;
+  edges_lost: number;
+  mixture: number[];
+  healthy_efficiency: number;
+  healthy_wear: number[];
+  results: ReorgStrategyResult[];
+  honesty_note: string;
+}
+
+export type ClosedLoopMode = "connect" | "modulate";
+export type ClosedLoopController = "none" | "open" | "closed";
+
+export interface ClosedLoopRequest extends ReorgMixture {
+  lesion_id: string;
+  mode: ClosedLoopMode;
+  budget: number;
+  base_strategy: ReorgStrategy;
+  epochs: number;
+  reps: number;
+  seed: number;
+}
+
+export interface ClosedLoopTrace {
+  controller: ClosedLoopController;
+  efficiency: number[];
+  alive: number[];
+  overload: number[];
+  deviation: number[];
+  interventions: number[];
+}
+
+export interface ReorgRegionState {
+  id: number;
+  network: string;
+  x: number;
+  y: number;
+  lesioned: boolean;
+  ratio_none: number;
+  ratio_closed: number;
+  alive_none: boolean;
+  alive_closed: boolean;
+}
+
+export interface ClosedLoopResponse {
+  lesion_id: string;
+  lesion_name: string;
+  mode: ClosedLoopMode;
+  budget: number;
+  base_strategy: ReorgStrategy | null;
+  mixture: number[];
+  edges_lost: number;
+  traces: ClosedLoopTrace[];
+  regions: ReorgRegionState[];
+  honesty_note: string;
+}
+
+// ---------- 시기 맞춤 재조직(가중치 모델, docs/58) ----------
+
+export type PlasticityPolicy = "tau0" | "dist" | "tau06" | "conc" | "matched" | "mismatched";
+
+export interface PlasticityScheduleRequest {
+  lesion_id: string;
+  schedule: "seq" | "ramp";
+  policies: PlasticityPolicy[];
+}
+
+export interface PlasticityPolicyResult {
+  policy: PlasticityPolicy | "none";
+  label: string;
+  mid: { casc_m12: number; casc_m10: number; eff_rel: number };
+  end: { casc_m12: number; casc_m10: number; eff_rel: number };
+}
+
+export interface PlasticityScheduleResponse {
+  lesion_id: string;
+  lesion_name: string;
+  schedule: "seq" | "ramp";
+  steps: number;
+  sprout_fraction_by_decile: number[];
+  results: PlasticityPolicyResult[];
+  honesty_note: string;
+}

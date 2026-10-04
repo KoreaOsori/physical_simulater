@@ -58,10 +58,22 @@ _REORG_RECORD_IDS = {
 }
 
 
-def test_hypothesis_notebook_has_all_thirty_records() -> None:
+# docs/51: 외부 검토 의견에 따른 강건성 후속(부모 가설 바로 아래)
+_ROBUSTNESS_RECORD_IDS = {
+    "h16-1-1-hubness-effect-robustness": ("h16-1-lesion-hubness-not-size", "lesion_hubness_robustness.py", "supported"),
+    "h16-2-1-short-vs-long-term-optima": ("h16-2-concentrated-recovers-efficiency", "short_long_term_reorganization.py", "supported"),
+    "h16-5-1-capacity-definition-sensitivity": ("h16-5-capacity-aware-distribution", "capacity_definition_sensitivity.py", "not_supported"),
+    "h16-5-2-headroom-not-algorithm-artifact": ("h16-5-1-capacity-definition-sensitivity", "headroom_robustness_suite.py", "supported"),
+    # docs/52
+    "h16-1-2-which-hubness-predicts-impact": ("h16-1-1-hubness-effect-robustness", "hubness_types.py", "supported"),
+    "h16-5-3-null-network-distribution": ("h16-5-2-headroom-not-algorithm-artifact", "null_network_distribution.py", "supported"),
+}
+
+
+def test_hypothesis_notebook_has_all_records() -> None:
     records = build_hypothesis_notebook()
     ids = {r.id for r in records}
-    assert len(records) == 30
+    assert len(records) == 50
     assert ids == {
         "h1-disease-hub-correlation",
         *_STATIC_RECORD_IDS,
@@ -69,13 +81,15 @@ def test_hypothesis_notebook_has_all_thirty_records() -> None:
         *_FIX_RECORD_IDS,
         *_FOLLOWUP_RECORD_IDS,
         *_REORG_RECORD_IDS,
+        *_ROBUSTNESS_RECORD_IDS,
+        *_H17_RECORD_IDS,
     }
 
 
 def test_reorganization_records_keep_real_verdicts_in_order() -> None:
     # docs/50: 사용자 가설 H16(혼재 -> 미확정)과 후속 H16-1~H16-5는 마지막에 순서대로, 문헌 정정(Griffis=Cell Reports) 포함
     records = build_hypothesis_notebook()
-    assert [r.id for r in records[-6:]] == list(_REORG_RECORD_IDS)
+    assert [r.id for r in records if r.id not in _ROBUSTNESS_RECORD_IDS and r.id not in _H17_RECORD_IDS][-6:] == list(_REORG_RECORD_IDS)
     by_id = {r.id: r for r in records}
     for hid, verdict in _REORG_RECORD_IDS.items():
         r = by_id[hid]
@@ -87,6 +101,68 @@ def test_reorganization_records_keep_real_verdicts_in_order() -> None:
         assert all(e.url.startswith("https://") for e in r.evidence)
     assert "Cell Reports" in by_id["h16-equal-hub-distribution-after-lesion"].raw_data_note
     assert "0.895" in by_id["h16-5-capacity-aware-distribution"].raw_data_note
+
+
+# docs/52: H17(정상 부하 지도 기반 재조직)과 후속은 노트 맨 끝에 순서대로
+_H17_RECORD_IDS = {
+    "h17-normative-load-map-reorganization": "supported",
+    "h17-1-restoring-the-load-map-and-circularity": "supported",
+    "h17-2-mixed-failure-parameter-recovery": "supported",
+    "h17-3-best-strategy-by-failure-mixture": "supported",
+    "h17-4-closed-loop-rehab": "inconclusive",
+    # docs/53
+    "h17-5-representative-connectome-sensitivity": "inconclusive",
+    "h17-6-synthetic-individual-envelope": "inconclusive",
+    # docs/55
+    "h17-7-tau-constraint-pareto": "supported",
+    # docs/56
+    "h17-8-staged-adaptive-under-threshold-uncertainty": "supported",
+    "h17-9-pair-flow-decomposition": "inconclusive",
+    "h17-10-weighted-strengthening-model": "not_supported",
+    # docs/57
+    "h17-11-why-weighted-model-flips": "inconclusive",
+    # docs/58
+    "h17-12-time-matched-strategy": "inconclusive",
+    # docs/59
+    "h17-13-premorbid-map-from-own-scan": "inconclusive",
+}
+
+
+def test_h17_records_close_the_notebook_with_real_verdicts() -> None:
+    records = build_hypothesis_notebook()
+    assert [r.id for r in records[-len(_H17_RECORD_IDS):]] == list(_H17_RECORD_IDS)
+    by_id = {r.id: r for r in records}
+    for hid, verdict in _H17_RECORD_IDS.items():
+        r = by_id[hid]
+        assert r.verdict == verdict
+        assert r.executed_at in ("2026-10-02", "2026-10-03")
+        assert r.raw_data_note
+    # 검토 의견 8번: '특정 정상 뇌'가 아니라 '정상 집단 대표 커넥톰'
+    assert "정상 집단 대표" in h17_title_and_statement(by_id)
+    # 9번: 합성 코호트는 실제 σ 크기를 주장하지 않는다
+    assert "실제 σ의 크기를 말하지 않는다" in by_id["h17-6-synthetic-individual-envelope"].result_summary
+    # 검토 의견 9·17번: 이름과 조건이 정직하게 들어가 있는지
+    h17 = by_id["h17-normative-load-map-reorganization"]
+    assert "정상 부하 지도 기반" in h17.statement and "연쇄형" in h17.statement
+    assert "실패 문턱이 정상 부하에 비례" in by_id["h17-1-restoring-the-load-map-and-circularity"].result_summary
+    # 검토 의견 13번: n=2는 '강한 탐색적 근거'로 정정
+    assert "강한 탐색적 근거" in by_id["h16-5-2-headroom-not-algorithm-artifact"].result_summary
+
+
+def test_robustness_followups_sit_right_after_their_parent() -> None:
+    records = build_hypothesis_notebook()
+    order = [r.id for r in records]
+    by_id = {r.id: r for r in records}
+    for hid, (parent, script, verdict) in _ROBUSTNESS_RECORD_IDS.items():
+        assert order.index(hid) == order.index(parent) + 1
+        r = by_id[hid]
+        assert r.verdict == verdict
+        assert r.executed_at in ("2026-09-30", "2026-10-02")
+        assert r.is_live_computed is False
+        assert script in r.method
+        assert r.raw_data_note
+    # docs/51 정정: H16-1의 0.69는 Pearson이 아니라 Spearman
+    assert "Spearman" in by_id["h16-1-1-hubness-effect-robustness"].result_summary
 
 
 def test_followups_sit_right_after_their_parent_and_keep_real_verdicts() -> None:
@@ -181,4 +257,9 @@ def test_h6_reports_mixed_cross_species_verdict_honestly() -> None:
 def test_hypothesis_notebook_endpoint_returns_200() -> None:
     response = client.get("/api/lab/hypotheses")
     assert response.status_code == 200
-    assert len(response.json()) == 30
+    assert len(response.json()) == 50
+
+
+def h17_title_and_statement(by_id) -> str:
+    r = by_id["h17-normative-load-map-reorganization"]
+    return r.title + r.statement

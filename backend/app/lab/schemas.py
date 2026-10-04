@@ -282,3 +282,133 @@ class HypothesisRecordOut(BaseModel):
     raw_data_note: str | None = Field(default=None, description="검증에 쓴 실제 원자료 숫자.")
     executed_at: str | None = Field(default=None, description="실제로 실행한 날짜 -- 라이브 계산이면 null(매번 다시 계산되므로 날짜 의미 없음).")
     is_live_computed: bool = Field(description="매 요청마다 실시간 재계산되는지, 아니면 이 세션에서 실제로 1회 수행하고 기록만 남긴 것인지.")
+
+
+# ---------- 손상-재조직 실험실 · 폐루프 재활 (docs/52) ----------
+
+class ReorgLesionOut(BaseModel):
+    id: str
+    name: str
+    category: str
+    size: int
+
+
+class ReorgLabMetaOut(BaseModel):
+    lesions: list[ReorgLesionOut]
+    strategies: list[str]
+    strategy_labels: dict[str, str]
+    mechanisms: dict[str, str]
+    healthy_efficiency: float
+    reference: dict | None = Field(default=None, description="스크립트로 미리 계산한 참고 결과(docs/52) -- 없으면 null.")
+    honesty_note: str
+
+
+class _Mixture(BaseModel):
+    w1: float = Field(default=0.25, ge=0, le=1)
+    w2: float = Field(default=0.25, ge=0, le=1)
+    w3: float = Field(default=0.25, ge=0, le=1)
+    w4: float = Field(default=0.25, ge=0, le=1)
+
+
+class ReorgLabRequest(_Mixture):
+    lesion_id: str
+    strategies: list[Literal["none", "local", "concentrated", "distributed", "normative", "random", "tau"]] = Field(min_length=1)
+    tau: float = Field(default=0.6, ge=0, le=5, description="τ 제약 전략의 여유선(자기 정상 용량 대비 비율). docs/55-56: 허용치를 모를 때 기대값 최적 ≈ 0.6.")
+    epochs: int = Field(default=10, ge=1, le=20)
+    reps: int = Field(default=2, ge=1, le=4)
+    cascade_m: float = Field(default=1.2, ge=0.8, le=1.5)
+    seed: int = Field(default=52, ge=0, le=10**6)
+
+
+class ReorgStrategyResultOut(BaseModel):
+    strategy: str
+    label: str
+    edges_added: int
+    efficiency: float = Field(description="재조직 직후 전역 효율(원래 400영역 기준).")
+    loadmap_rho: float = Field(description="재조직 후 부하와 정상 부하 지도의 Spearman 상관(생존 영역).")
+    overload_frac: float = Field(description="정상 부하 × 1.2를 넘는 생존 영역 비율.")
+    cascade_survival: float
+    wear_mean: list[float]
+    wear_sd: list[float]
+
+
+class ReorgLabResponse(BaseModel):
+    lesion_id: str
+    lesion_name: str
+    lesion_size: int
+    edges_lost: int
+    mixture: list[float]
+    healthy_efficiency: float
+    healthy_wear: list[float]
+    results: list[ReorgStrategyResultOut]
+    honesty_note: str
+
+
+class ClosedLoopRequest(_Mixture):
+    lesion_id: str
+    mode: Literal["connect", "modulate"] = "connect"
+    budget: int = Field(default=20, ge=1, le=100, description="시기당 개입 수(연결 유도: 새 연결 수, 활동 조절: 자극 영역 수).")
+    base_strategy: Literal["none", "local", "concentrated", "distributed", "normative", "random"] = Field(
+        default="distributed", description="활동 조절 모드에서 환자가 이미 겪은 자연 재조직(연결 유도 모드에서는 무시 -- 개입 자체가 재조직).")
+    epochs: int = Field(default=12, ge=1, le=20)
+    reps: int = Field(default=2, ge=1, le=4)
+    seed: int = Field(default=52, ge=0, le=10**6)
+
+
+class ClosedLoopTraceOut(BaseModel):
+    controller: Literal["none", "open", "closed"]
+    efficiency: list[float]
+    alive: list[float]
+    overload: list[float]
+    deviation: list[float] = Field(description="정상 부하 지도 이탈: 생존 영역 |log((부하+1)/(정상 부하+1))| 평균.")
+    interventions: list[float]
+
+
+class ReorgRegionStateOut(BaseModel):
+    id: int
+    network: str
+    x: float
+    y: float
+    lesioned: bool
+    ratio_none: float
+    ratio_closed: float
+    alive_none: bool
+    alive_closed: bool
+
+
+class ClosedLoopResponse(BaseModel):
+    lesion_id: str
+    lesion_name: str
+    mode: str
+    budget: int
+    base_strategy: str | None
+    mixture: list[float]
+    edges_lost: int
+    traces: list[ClosedLoopTraceOut]
+    regions: list[ReorgRegionStateOut]
+    honesty_note: str
+
+
+# ---------- 시기 맞춤 재조직(가중치 모델, docs/58) ----------
+
+class PlasticityScheduleRequest(BaseModel):
+    lesion_id: str
+    schedule: Literal["seq", "ramp"] = Field(default="seq", description="seq: 앞 50% 강화 -> 뒤 50% 발아, ramp: 발아 확률 0 -> 1 선형 증가.")
+    policies: list[Literal["tau0", "dist", "tau06", "conc", "matched", "mismatched"]] = Field(min_length=1)
+
+
+class PlasticityPolicyResultOut(BaseModel):
+    policy: str
+    label: str
+    mid: dict[str, float] = Field(description="50% 지점: casc_m12, casc_m10, eff_rel(정상 대비 가중 효율).")
+    end: dict[str, float]
+
+
+class PlasticityScheduleResponse(BaseModel):
+    lesion_id: str
+    lesion_name: str
+    schedule: str
+    steps: int
+    sprout_fraction_by_decile: list[float] = Field(description="재조직 단계를 10등분했을 때 각 구간에서 발아(새 연결)가 차지한 비율.")
+    results: list[PlasticityPolicyResultOut]
+    honesty_note: str

@@ -2171,3 +2171,410 @@ a {
   color: var(--muted);
   cursor: default;
 }
+
+/* ---------- 손상-재조직 실험실 · 폐루프 재활 (docs/52) ---------- */
+.reorg-lab .lab-error {
+  margin: 0;
+  font: 10px var(--font-dm-mono);
+  color: #e0b48c;
+}
+
+.reorg-hypothesis {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 11px;
+  line-height: 1.7;
+  color: #cddccf;
+}
+
+.reorg-hypothesis strong {
+  color: var(--lime);
+  font-size: 12px;
+}
+
+.reorg-hypothesis p {
+  margin: 6px 0 0;
+}
+
+.reorg-hypothesis-note,
+.reorg-hint,
+.reorg-summary,
+.reorg-loop-explain {
+  font: 10px/1.7 var(--font-dm-mono);
+  color: var(--muted);
+  margin: 0;
+}
+
+.reorg-summary {
+  color: #cddccf;
+}
+
+.reorg-loop-explain {
+  border-left: 2px solid var(--line);
+  padding-left: 10px;
+}
+
+.reorg-controls,
+.reorg-tab-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px 18px;
+  font: 10px var(--font-dm-mono);
+  color: var(--muted);
+}
+
+.reorg-controls label,
+.reorg-tab-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reorg-lab select,
+.reorg-lab input[type="number"] {
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 5px 6px;
+  font: 11px var(--font-dm-mono);
+  max-width: 100%;
+}
+
+.reorg-lab input[type="number"] {
+  width: 70px;
+}
+
+.reorg-mix {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 10px 8px;
+  display: grid;
+  gap: 4px;
+  min-width: min(100%, 340px);
+}
+
+.reorg-mix legend {
+  padding: 0 4px;
+}
+
+.reorg-mix label {
+  display: grid !important;
+  grid-template-columns: 130px 1fr 36px;
+  align-items: center;
+  gap: 8px;
+}
+
+.reorg-mix input[type="range"] {
+  accent-color: var(--lime);
+  width: 100%;
+}
+
+.reorg-mix em {
+  font-style: normal;
+  color: #cddccf;
+  text-align: right;
+}
+
+.reorg-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.reorg-presets button,
+.lab-run-button {
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+  font: 10px var(--font-dm-mono);
+  border-radius: 4px;
+}
+
+.lab-run-button {
+  padding: 7px 14px;
+  border-color: #c2ff7066;
+  color: var(--lime);
+}
+
+.lab-run-button:disabled {
+  opacity: 0.5;
+  cursor: progress;
+}
+
+.reorg-tabs {
+  margin-top: 4px;
+}
+
+.reorg-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.reorg-strategy-picks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+}
+
+.reorg-strategy-picks label {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 5px !important;
+  color: #cddccf;
+}
+
+.reorg-strategy-picks i,
+.reorg-table i {
+  display: inline-block;
+  width: 10px;
+  height: 3px;
+  border-radius: 2px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.reorg-table-wrap {
+  overflow-x: auto;
+}
+
+.reorg-table {
+  border-collapse: collapse;
+  width: 100%;
+  font: 10px var(--font-dm-mono);
+  color: #cddccf;
+}
+
+.reorg-table th,
+.reorg-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 6px 8px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.reorg-table th:first-child,
+.reorg-table td:first-child {
+  text-align: left;
+}
+
+.reorg-table th {
+  color: var(--muted);
+  font-weight: normal;
+}
+
+.reorg-table td.is-best {
+  color: var(--lime);
+  font-weight: 700;
+}
+
+.reorg-loop-charts {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+}
+
+.reorg-maps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.reorg-map,
+.reorg-ref-map,
+.reorg-ref-null {
+  margin: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  max-width: 100%;
+}
+
+.reorg-map figcaption,
+.reorg-ref-map figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font: 10px var(--font-dm-mono);
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.reorg-map figcaption span,
+.reorg-ref-map figcaption span {
+  color: var(--muted);
+}
+
+.reorg-map svg,
+.reorg-ref-map svg,
+.reorg-ref-hist svg {
+  display: block;
+  max-width: 100%;
+}
+
+.reorg-map-node {
+  stroke: #07140f;
+  stroke-width: 1;
+}
+
+.reorg-map-lost {
+  fill: none;
+  stroke: #8a9a8e;
+  stroke-width: 1;
+}
+
+.reorg-map-lesion {
+  stroke: #cddccf;
+  stroke-width: 1.4;
+}
+
+.reorg-map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font: 9px var(--font-dm-mono);
+  color: var(--muted);
+}
+
+.reorg-map-legend i {
+  display: inline-block;
+  width: 90px;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.reorg-map-legend em {
+  font-style: normal;
+  margin-left: 6px;
+}
+
+.reorg-map-tip {
+  margin: 4px 0 0;
+  min-height: 1.6em;
+  font: 9px/1.6 var(--font-dm-mono);
+  color: #cddccf;
+}
+
+.reorg-ref {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.reorg-ref-tri {
+  fill: none;
+  stroke: #b9e6c733;
+}
+
+.reorg-ref-cell {
+  stroke: #07140f;
+  stroke-width: 2;
+}
+
+.reorg-ref-cell-label {
+  font: 700 10px var(--font-noto-sans-kr), sans-serif;
+  fill: #06100d;
+  pointer-events: none;
+}
+
+.reorg-ref-legend {
+  flex-wrap: wrap;
+  font: 9px var(--font-dm-mono);
+}
+
+.reorg-ref-w4,
+.reorg-ref-notes {
+  margin: 6px 0 0;
+  padding-left: 16px;
+  font: 9px/1.7 var(--font-dm-mono);
+  color: #cddccf;
+}
+
+.reorg-ref-null {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font: 10px var(--font-dm-mono);
+  color: var(--ink);
+}
+
+.reorg-ref-hist {
+  margin: 0;
+}
+
+.reorg-ref-hist figcaption {
+  font: 9px var(--font-dm-mono);
+  color: var(--muted);
+}
+
+.reorg-ref-bar {
+  fill: #3987e5;
+}
+
+.reorg-ref-real {
+  stroke: #cddccf;
+  stroke-width: 2;
+}
+
+@media (max-width: 700px) {
+  .reorg-mix label {
+    grid-template-columns: 96px 1fr 32px;
+  }
+}
+
+.reorg-tabs button[aria-selected="true"] {
+  color: var(--lime);
+  border-color: var(--lime);
+}
+
+/* 시기 맞춤 재조직(docs/58) */
+.reorg-sprout-profile {
+  margin: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  max-width: 420px;
+}
+
+.reorg-sprout-profile figcaption {
+  font: 10px var(--font-dm-mono);
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.reorg-sprout-bars {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+  height: 70px;
+}
+
+.reorg-sprout-bars span {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.reorg-sprout-bars i {
+  display: block;
+  width: 100%;
+  background: #3987e5;
+  border-radius: 4px 4px 0 0;
+}
+
+.reorg-sprout-bars em {
+  font: 9px var(--font-dm-mono);
+  font-style: normal;
+  color: var(--muted);
+  margin-top: 2px;
+}

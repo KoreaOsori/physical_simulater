@@ -12,9 +12,16 @@ import type {
   MicroConnectomeSample,
 } from "@/types/human";
 import type {
+  ClosedLoopRequest,
+  ClosedLoopResponse,
   ExploreChatResponse,
   GenePathwayReport,
   HypothesisRecord,
+  PlasticityScheduleRequest,
+  PlasticityScheduleResponse,
+  ReorgLabMeta,
+  ReorgLabRequest,
+  ReorgLabResponse,
   TopologyReport,
   VirtualExperimentRequest,
   VirtualExperimentResponse,
@@ -275,5 +282,43 @@ export async function postVirtualOrganismPose(species: "worm" | "fly", pose: Vir
     body: JSON.stringify(pose),
   });
   if (!res.ok) throw new ApiError(`Failed to set virtual ${species} pose: ${res.status}`, res.status);
+  return res.json();
+}
+
+/** 손상-재조직 실험실 · 폐루프 재활(docs/52). 실제 계산이라 수십 초 걸릴 수 있다. */
+export async function fetchReorgLabMeta(): Promise<ReorgLabMeta> {
+  const res = await fetch(`${API_URL}/api/lab/reorganization/meta`);
+  if (!res.ok) throw new Error(`Failed to fetch reorganization lab meta: ${res.status}`);
+  return res.json();
+}
+
+export async function postReorgLabRun(request: ReorgLabRequest): Promise<ReorgLabResponse> {
+  const res = await fetch(`${API_URL}/api/lab/reorganization/run`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(request),
+  });
+  if (!res.ok) throw new Error(`Failed to run reorganization lab: ${res.status}`);
+  return res.json();
+}
+
+export async function postClosedLoopRehab(request: ClosedLoopRequest): Promise<ClosedLoopResponse> {
+  const res = await fetch(`${API_URL}/api/lab/reorganization/closed-loop`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(request),
+  });
+  if (!res.ok) throw new Error(`Failed to run closed-loop rehab: ${res.status}`);
+  return res.json();
+}
+
+/** 시기 맞춤 재조직(가중치 모델, docs/58). 정책 6개 기준 수십 초. */
+export async function postPlasticitySchedule(request: PlasticityScheduleRequest): Promise<PlasticityScheduleResponse> {
+  const res = await fetch(`${API_URL}/api/lab/reorganization/plasticity-schedule`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(request),
+  });
+  if (!res.ok) throw new Error(`Failed to run plasticity schedule: ${res.status}`);
   return res.json();
 }

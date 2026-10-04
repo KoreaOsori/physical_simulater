@@ -1,0 +1,846 @@
+{
+ "notes": [
+  "전략 지도: 국소 증후군 9개 × 반복 3, 10시기 마모 뒤 전역 효율(원래 400영역 기준)이 가장 높은 전략(scripts/mixed_failure_model.py MODE=strategy).",
+  "귀무 분포: 국소 증후군 25개 평균 연쇄 생존(m=1.2)의 차이(정상 부하 지도 기반 − 균등 분산)(scripts/null_network_distribution.py)."
+ ],
+ "strategy_map": [
+  {
+   "w": [
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "concentrated",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.33868,
+     "retained": 0.89745
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34749,
+     "retained": 0.8978
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.35901,
+     "retained": 0.89821
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.35647,
+     "retained": 0.89813
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.35233,
+     "retained": 0.89793
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.35743,
+     "retained": 0.89776
+    }
+   }
+  },
+  {
+   "w": [
+    0.0,
+    0.25,
+    0.75,
+    0.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "distributed",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.3379,
+     "retained": 0.89544
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34701,
+     "retained": 0.89675
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.35945,
+     "retained": 0.89946
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.3571,
+     "retained": 0.89983
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.35249,
+     "retained": 0.8985
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.35807,
+     "retained": 0.89949
+    }
+   }
+  },
+  {
+   "w": [
+    0.0,
+    0.5,
+    0.5,
+    0.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "distributed",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.33727,
+     "retained": 0.89378
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34735,
+     "retained": 0.89797
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.35978,
+     "retained": 0.90024
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.35906,
+     "retained": 0.90483
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.35279,
+     "retained": 0.89945
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.35976,
+     "retained": 0.90383
+    }
+   }
+  },
+  {
+   "w": [
+    0.0,
+    0.75,
+    0.25,
+    0.0
+   ],
+   "best_effT": "random",
+   "best_retained": "distributed",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.33693,
+     "retained": 0.89321
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34592,
+     "retained": 0.89433
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.35687,
+     "retained": 0.89262
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.35987,
+     "retained": 0.9071
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.35272,
+     "retained": 0.89928
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.35994,
+     "retained": 0.90454
+    }
+   }
+  },
+  {
+   "w": [
+    0.0,
+    1.0,
+    0.0,
+    0.0
+   ],
+   "best_effT": "distributed",
+   "best_retained": "distributed",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.33598,
+     "retained": 0.89059
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34646,
+     "retained": 0.89568
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.35527,
+     "retained": 0.88831
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.36101,
+     "retained": 0.91002
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.35275,
+     "retained": 0.89958
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.3605,
+     "retained": 0.90596
+    }
+   }
+  },
+  {
+   "w": [
+    0.25,
+    0.0,
+    0.75,
+    0.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "none",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.33945,
+     "retained": 0.89951
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34412,
+     "retained": 0.88845
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.35843,
+     "retained": 0.8958
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.31251,
+     "retained": 0.78576
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.35078,
+     "retained": 0.8939
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.34291,
+     "retained": 0.86083
+    }
+   }
+  },
+  {
+   "w": [
+    0.25,
+    0.25,
+    0.5,
+    0.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "concentrated",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.33793,
+     "retained": 0.89557
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.3437,
+     "retained": 0.88754
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.35896,
+     "retained": 0.89717
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.31358,
+     "retained": 0.78851
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.35105,
+     "retained": 0.89482
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.34359,
+     "retained": 0.86271
+    }
+   }
+  },
+  {
+   "w": [
+    0.25,
+    0.5,
+    0.25,
+    0.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "normative",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.33661,
+     "retained": 0.892
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34331,
+     "retained": 0.88682
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.35646,
+     "retained": 0.89081
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.3148,
+     "retained": 0.79175
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.3516,
+     "retained": 0.89636
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.34403,
+     "retained": 0.86393
+    }
+   }
+  },
+  {
+   "w": [
+    0.25,
+    0.75,
+    0.0,
+    0.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "normative",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.33674,
+     "retained": 0.89248
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34193,
+     "retained": 0.88342
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.35416,
+     "retained": 0.88503
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.31553,
+     "retained": 0.79391
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.35016,
+     "retained": 0.89281
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.34391,
+     "retained": 0.86394
+    }
+   }
+  },
+  {
+   "w": [
+    0.5,
+    0.0,
+    0.5,
+    0.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "none",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.33995,
+     "retained": 0.90072
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34222,
+     "retained": 0.88374
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.35889,
+     "retained": 0.89654
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.30078,
+     "retained": 0.75619
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.35019,
+     "retained": 0.89264
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.33708,
+     "retained": 0.84612
+    }
+   }
+  },
+  {
+   "w": [
+    0.5,
+    0.25,
+    0.25,
+    0.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "none",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.33855,
+     "retained": 0.89713
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34169,
+     "retained": 0.88239
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.35901,
+     "retained": 0.89674
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.3013,
+     "retained": 0.75766
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.35056,
+     "retained": 0.89363
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.33677,
+     "retained": 0.84526
+    }
+   }
+  },
+  {
+   "w": [
+    0.5,
+    0.5,
+    0.0,
+    0.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "normative",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.33701,
+     "retained": 0.89304
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34144,
+     "retained": 0.88199
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.35648,
+     "retained": 0.89028
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.30141,
+     "retained": 0.75814
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.35093,
+     "retained": 0.89468
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.33728,
+     "retained": 0.84693
+    }
+   }
+  },
+  {
+   "w": [
+    0.75,
+    0.0,
+    0.25,
+    0.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "none",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.34026,
+     "retained": 0.90148
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34174,
+     "retained": 0.88239
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.36079,
+     "retained": 0.90095
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.29525,
+     "retained": 0.74225
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.35034,
+     "retained": 0.89305
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.33362,
+     "retained": 0.83741
+    }
+   }
+  },
+  {
+   "w": [
+    0.75,
+    0.25,
+    0.0,
+    0.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "concentrated",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.33861,
+     "retained": 0.89748
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34093,
+     "retained": 0.88035
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.36013,
+     "retained": 0.89927
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.29562,
+     "retained": 0.74324
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.35022,
+     "retained": 0.8929
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.33401,
+     "retained": 0.8384
+    }
+   }
+  },
+  {
+   "w": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "none",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.34098,
+     "retained": 0.90344
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.34149,
+     "retained": 0.88175
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.3614,
+     "retained": 0.90238
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.29047,
+     "retained": 0.72995
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.3498,
+     "retained": 0.8915
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.33203,
+     "retained": 0.83325
+    }
+   }
+  },
+  {
+   "w": [
+    0,
+    0,
+    0,
+    1.0
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "none",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.36948,
+     "retained": 0.97727
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.37863,
+     "retained": 0.97674
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.39078,
+     "retained": 0.97657
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.38815,
+     "retained": 0.97658
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.38366,
+     "retained": 0.97644
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.38928,
+     "retained": 0.97643
+    }
+   }
+  },
+  {
+   "w": [
+    0.5,
+    0,
+    0,
+    0.5
+   ],
+   "best_effT": "concentrated",
+   "best_retained": "none",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.35481,
+     "retained": 0.93919
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.35692,
+     "retained": 0.92083
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.37485,
+     "retained": 0.93599
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.31221,
+     "retained": 0.78446
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.36589,
+     "retained": 0.93189
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.35015,
+     "retained": 0.87814
+    }
+   }
+  },
+  {
+   "w": [
+    0,
+    0.5,
+    0,
+    0.5
+   ],
+   "best_effT": "random",
+   "best_retained": "distributed",
+   "table": {
+    "none": {
+     "eff0": 0.37764,
+     "effT": 0.35153,
+     "retained": 0.93105
+    },
+    "local": {
+     "eff0": 0.38727,
+     "effT": 0.36201,
+     "retained": 0.9351
+    },
+    "concentrated": {
+     "eff0": 0.39988,
+     "effT": 0.37395,
+     "retained": 0.93528
+    },
+    "distributed": {
+     "eff0": 0.39711,
+     "effT": 0.37331,
+     "retained": 0.94043
+    },
+    "normative": {
+     "eff0": 0.39258,
+     "effT": 0.36758,
+     "retained": 0.93664
+    },
+    "random": {
+     "eff0": 0.39834,
+     "effT": 0.37405,
+     "retained": 0.93918
+    }
+   }
+  }
+ ],
+ "null_test": {
+  "deg": {
+   "label": "degree 보존 재배선",
+   "real": 0.18498150958384538,
+   "null_mean": 0.05172148220893479,
+   "null_p2_5": 0.047121037449381196,
+   "null_p97_5": 0.05719067455885922,
+   "p_real_gt_null": 1.0,
+   "n": 95,
+   "hist": {
+    "edges": [
+     0.043960376842350525,
+     0.04519071168859834,
+     0.04642104653484616,
+     0.04765138138109398,
+     0.0488817162273418,
+     0.05011205107358961,
+     0.05134238591983743,
+     0.052572720766085254,
+     0.05380305561233307,
+     0.05503339045858088,
+     0.056263725304828704,
+     0.057494060151076526,
+     0.05872439499732434
+    ],
+    "counts": [
+     2,
+     0,
+     2,
+     11,
+     13,
+     16,
+     19,
+     9,
+     8,
+     9,
+     4,
+     2
+    ]
+   }
+  },
+  "geo": {
+   "label": "degree + 배선 길이 보존",
+   "real": 0.18498150958384538,
+   "null_mean": 0.10013615435945163,
+   "null_p2_5": 0.0930816648124319,
+   "null_p97_5": 0.10729000753344821,
+   "p_real_gt_null": 1.0,
+   "n": 50,
+   "hist": {
+    "edges": [
+     0.08946939305164303,
+     0.0909796033626897,
+     0.09248981367373639,
+     0.09400002398478308,
+     0.09551023429582975,
+     0.09702044460687642,
+     0.09853065491792311,
+     0.1000408652289698,
+     0.10155107554001647,
+     0.10306128585106314,
+     0.10457149616210983,
+     0.10608170647315651,
+     0.10759191678420318
+    ],
+    "counts": [
+     1,
+     1,
+     0,
+     1,
+     7,
+     6,
+     9,
+     7,
+     8,
+     6,
+     1,
+     3
+    ]
+   }
+  }
+ }
+}

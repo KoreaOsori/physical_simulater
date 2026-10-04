@@ -64,7 +64,12 @@ export function LabIndexPage() {
           <Link href="/lab/hypotheses" className="circuit-card">
             <strong>가설 노트</strong>
             <em>4개 도구를 조합한 실제 검증 기록</em>
-            <p>위 도구들과 가상 개체 폐루프를 실제로 돌려 세운 가설 30개 — 지지됐든 기각됐든/혼재하든(예: 다중 질환 영역과 위상 중심성은 상관 없음, 무작위 회피는 &lsquo;새는&rsquo; 배제 구역을 만듦) 정직하게 기록한다.</p>
+            <p>위 도구들과 가상 개체 폐루프를 실제로 돌려 세운 가설 49개 — 지지됐든 기각됐든/혼재하든(예: 다중 질환 영역과 위상 중심성은 상관 없음, 무작위 회피는 &lsquo;새는&rsquo; 배제 구역을 만듦) 정직하게 기록한다.</p>
+          </Link>
+          <Link href="/lab/reorganization" className="circuit-card">
+            <strong>손상-재조직 실험실 · 폐루프 재활</strong>
+            <em>인간 거시 커넥톰 400영역 · 가설 H17</em>
+            <p>병변을 고르고 재조직 전략과 손상 기전 혼합(W1~W4)을 바꿔 결과를 비교한다. 폐루프 탭에서는 매 시기 정상 부하 지도와의 차이를 재고 개입(연결 유도 또는 활동 조절)하는 재활을, 같은 예산의 개방 루프와 비교한다.</p>
           </Link>
           <Link href="/lab/virtual-worm" className="circuit-card">
             <strong>가상 예쁜꼬마선충 — 환경 폐루프</strong>

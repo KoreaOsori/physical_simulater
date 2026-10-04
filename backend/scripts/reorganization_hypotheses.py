@@ -85,7 +85,7 @@ def metrics(g: nx.Graph, modules: dict) -> dict:
     }
 
 
-def reorganize(g_lesioned: nx.Graph, lost: dict, dist: np.ndarray, lmax: float, strategy: str, rng: random.Random, capacity: dict | None = None) -> nx.Graph:
+def reorganize(g_lesioned: nx.Graph, lost: dict, dist: np.ndarray, lmax: float, strategy: str, rng: random.Random, capacity: dict | None = None, on_edge=None, max_edges: int | None = None) -> nx.Graph:
     """lost: 생존 영역 -> 병변 때문에 잃은 연결 수. 각 영역이 잃은 만큼 새 연결을 만든다(라운드로빈).
 
     headroom(R6, docs/50): '균등하게'가 아니라 '각 영역이 자기 정상 용량 대비 얼마나 여유 있는가' 기준 --
@@ -98,6 +98,8 @@ def reorganize(g_lesioned: nx.Graph, lost: dict, dist: np.ndarray, lmax: float, 
     btw = betweenness(g) if strategy in ("distributed", "headroom") else None
     added = 0
     for n in queue:
+        if max_edges is not None and added >= max_edges:
+            break  # docs/51 ①: 전략 간 연결 예산 동일화
         cands = [t for t in g.nodes if t != n and not g.has_edge(n, t) and dist[n, t] <= lmax]
         if not cands:
             continue
@@ -113,6 +115,8 @@ def reorganize(g_lesioned: nx.Graph, lost: dict, dist: np.ndarray, lmax: float, 
             t = min(cands, key=lambda c: (btw[c], g.degree(c), rng.random()))
         g.add_edge(n, t)
         added += 1
+        if on_edge is not None:
+            on_edge(added, g, n, t)  # docs/51: 단기 회복 곡선·추가된 연결 기록용
         if strategy in ("distributed", "headroom") and added % 10 == 0:
             btw = betweenness(g)  # 부하 지도를 주기적으로 갱신(매번 갱신은 계산 비용이 커서 10개마다)
     return g

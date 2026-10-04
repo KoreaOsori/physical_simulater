@@ -11,11 +11,21 @@ from fastapi.concurrency import run_in_threadpool
 from app.lab.explore_chat import answer_explore_chat
 from app.lab.gene_hypothesis import build_gene_pathway_candidates
 from app.lab.hypothesis_notebook import build_hypothesis_notebook
+from app.lab.reorganization_lab import get_meta as get_reorganization_meta
+from app.lab.reorganization_lab import run_closed_loop, run_reorganization_lab
+from app.lab.plasticity_schedule import run_plasticity_schedule
 from app.lab.schemas import (
+    ClosedLoopRequest,
+    ClosedLoopResponse,
     ExploreChatRequest,
     ExploreChatResponse,
     GenePathwayReportOut,
     HypothesisRecordOut,
+    PlasticityScheduleRequest,
+    PlasticityScheduleResponse,
+    ReorgLabMetaOut,
+    ReorgLabRequest,
+    ReorgLabResponse,
     TopologyReportOut,
     VirtualExperimentRequest,
     VirtualExperimentResponse,
@@ -209,3 +219,34 @@ async def post_virtual_fly_pose(request: VirtualOrganismPoseIn) -> VirtualFlySta
         return await run_in_threadpool(set_virtual_fly_pose, request)
     except StaleRunError:
         raise HTTPException(status_code=409, detail="다시 시작 이전 기록의 위치입니다.")
+
+
+# 손상-재조직 실험실 · 폐루프 재활 (docs/52). 순수 계산(공유 상태 없음)이라 잠금 불필요 -- 수 초~수십 초라 이벤트 루프 밖에서.
+@router.get("/reorganization/meta", response_model=ReorgLabMetaOut)
+async def read_reorganization_meta() -> ReorgLabMetaOut:
+    return await run_in_threadpool(get_reorganization_meta)
+
+
+@router.post("/reorganization/run", response_model=ReorgLabResponse)
+async def post_reorganization_run(request: ReorgLabRequest) -> ReorgLabResponse:
+    try:
+        return await run_in_threadpool(run_reorganization_lab, request)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=f"unknown lesion_id: {request.lesion_id}") from exc
+
+
+@router.post("/reorganization/closed-loop", response_model=ClosedLoopResponse)
+async def post_reorganization_closed_loop(request: ClosedLoopRequest) -> ClosedLoopResponse:
+    try:
+        return await run_in_threadpool(run_closed_loop, request)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=f"unknown lesion_id: {request.lesion_id}") from exc
+
+
+@router.post("/reorganization/plasticity-schedule", response_model=PlasticityScheduleResponse)
+async def post_plasticity_schedule(request: PlasticityScheduleRequest) -> PlasticityScheduleResponse:
+    # docs/58: 가중치 모델 시기 맞춤 재조직. 정책 6개 기준 수십 초.
+    try:
+        return await run_in_threadpool(run_plasticity_schedule, request)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=f"unknown lesion_id: {request.lesion_id}") from exc
