@@ -89,13 +89,19 @@ def _read_matrix(path: Path) -> np.ndarray:
     return np.loadtxt(path, delimiter=delim)
 
 
+# micapipe 416 배치에서 피질 400개의 위치(좌반구 200 + 우반구 200, 내측벽 14·215 제외)
+MICAPIPE_CORTEX = list(range(15, 215)) + list(range(216, 416))
+
+
 def load_real_cohort(root: str, n_edges: int) -> tuple[list[str], list[np.ndarray]]:
     """MICA_DIR 아래의 개인별 Schaefer-400 구조 연결 행렬을 읽어, 각자 가중치 상위 n_edges개로 이진화한다.
 
     파일 이름에 'schaefer'와 '400'이 들어 있고 'length'·'fc'가 없는 행렬을 피험자 폴더(sub-*)별로 1개씩 고른다
-    (같은 사람에 세션이 여럿이면 이름순 첫 번째). 행렬이 400보다 크면(피질하·소뇌 포함) MICA_OFFSET으로
-    피질 400 블록의 시작 위치를 지정해야 한다 -- 데이터를 받은 뒤 확인해서 정한다.
-    상삼각만 채워진 행렬은 대칭으로 만든다.
+    (같은 사람에 세션이 여럿이면 이름순 첫 번째; micapipe의 'desc-sc' 파일이 있으면 그것만). 상삼각만 채워진
+    행렬은 대칭으로 만든다.
+    크기가 416이면 micapipe 배치로 본다: 0~13 피질하 14개, 14 좌반구 내측벽, 15~214 좌반구 200개,
+    215 우반구 내측벽, 216~415 우반구 200개(MICA-MICs 50명 모두에서 14·215번만 비어 있음을 확인).
+    그 밖의 크기는 MICA_OFFSET으로 피질 400 블록의 시작 위치를 지정한다.
     """
     files = sorted(
         p for p in Path(root).rglob("*")
@@ -103,6 +109,8 @@ def load_real_cohort(root: str, n_edges: int) -> tuple[list[str], list[np.ndarra
         and not any(k in p.name.lower() for k in ("length", "_fc", "func"))
         and p.suffix.lower() in (".txt", ".csv", ".npy", ".gii")
     )
+    if any("desc-sc" in p.name for p in files):
+        files = [p for p in files if "desc-sc" in p.name]
     by_sub: dict[str, Path] = {}
     for p in files:
         sub = next((part for part in p.parts if part.startswith("sub-")), p.stem)
@@ -115,7 +123,9 @@ def load_real_cohort(root: str, n_edges: int) -> tuple[list[str], list[np.ndarra
         m = _read_matrix(p)
         if m.shape[0] != m.shape[1]:
             raise SystemExit(f"{p}: 정사각 행렬이 아니다 {m.shape}")
-        if m.shape[0] != N:
+        if m.shape[0] == 416:
+            m = m[np.ix_(MICAPIPE_CORTEX, MICAPIPE_CORTEX)]
+        elif m.shape[0] != N:
             if off is None:
                 raise SystemExit(f"{p}: 크기 {m.shape} -- 피질 400 블록 시작 위치를 MICA_OFFSET으로 지정해야 한다")
             o = int(off)

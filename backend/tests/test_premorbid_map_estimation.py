@@ -60,3 +60,19 @@ def test_impute_only_touches_lesion_pairs_with_expected_count() -> None:
     assert out[touch].sum() == int(round(freq[touch].sum()))
     chosen = freq[touch][out[touch]]
     assert chosen.min() >= freq[touch][~out[touch]].max()  # 빈도 높은 쌍부터
+
+
+def test_loader_reads_micapipe_416_layout(tmp_path) -> None:
+    # micapipe: 0~13 피질하, 14·215 내측벽(빈 행), 15~214 좌반구, 216~415 우반구. 상삼각, 쉼표 구분.
+    d = tmp_path / "sub-HC001" / "ses-01" / "dwi"
+    d.mkdir(parents=True)
+    w = _random_weights(0)
+    big = np.zeros((416, 416))
+    big[np.ix_(pm.MICAPIPE_CORTEX, pm.MICAPIPE_CORTEX)] = w
+    big[:14, :14] = np.triu(np.full((14, 14), 99.0), 1)  # 피질하 강한 연결은 무시되어야 한다
+    np.savetxt(d / "sub-HC001_ses-01_space-dwinative_atlas-schaefer400_desc-sc.txt", big, delimiter=",")
+    np.savetxt(d / "sub-HC001_ses-01_space-dwinative_atlas-schaefer400_desc-edgeLength.txt", big, delimiter=",")
+    _, vecs = pm.load_real_cohort(str(tmp_path), n_edges=300)
+    wu = w[IU]
+    assert vecs[0].sum() == 300
+    assert wu[vecs[0]].min() >= wu[~vecs[0]].max()
