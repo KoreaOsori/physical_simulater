@@ -2031,6 +2031,49 @@ def _h17_2_mixed_failure_recovery() -> HypothesisRecordOut:
     )
 
 
+def _h17_14_real_test_retest_noise() -> HypothesisRecordOut:
+    return HypothesisRecordOut(
+        id="h17-14-real-test-retest-scan-noise",
+        title="H17-14 · 실제 반복 촬영 잡음은 얼마나 크고, 손상 후 촬영으로 병전 지도를 개인화할 수 있는 수준인가?",
+        statement=(
+            "(H17-13 후속) H17-13에서 손상 후 촬영으로 병전 지도를 채워 넣는 방법은 촬영 잡음 ε에 막혔다(MICA 50명: ε 5% −17%, 2% +12%, 0% +92%). "
+            "그 ε=5%는 가정이었다. 실제 반복 촬영으로 ε를 재면, 개인화가 이득이 되는 쪽(ε ≤ 2%)인지 아닌지 정해진다. "
+            "예측: 반복 촬영의 차이는 사람 사이 차이보다 훨씬 작다(교체율 비 ≤ 0.3)."
+        ),
+        method=(
+            "Zenodo 14017270(Barjuan 2024, HCP 반복 촬영 표본 44건, Lausanne 분할). 세션 표시가 없어 집단 평균을 뺀 연결 패턴의 상호 최근접으로 반복 촬영 "
+            "20쌍을 추론(layer 1·2에서 같은 짝, z ≥ 3.4). Liu 합의와 같은 밀도 6.34%로 이진화해 짝 사이·사람 사이의 간선 교체율, 부하(매개 중심성) Spearman, "
+            "상위 5% 허브 일치를 잼. MICA 50명에 docs/59 잡음 perturb(ε)를 독립적으로 두 번 넣은 곡선과 비(반복/사람 사이)로 맞춰 MICA 척도의 ε를 구함 "
+            "(backend/scripts/test_retest_noise.py). 이어 ε=10%로 docs/59 실제 분석을 다시 돌림(PREMORBID_EPS=0.10). 가중 매개 중심성·강도의 재현성도 비교."
+        ),
+        result_summary=(
+            "기각 -- 같은 사람을 다시 찍은 차이가 다른 사람끼리의 차이와 거의 같다. 교체율 반복 0.334 vs 사람 사이 0.368(비 0.91, layer 2 0.88, 밀도 6~15%에서 "
+            "0.91~0.92), 부하 Spearman 반복 0.60 vs 사람 사이 0.53. MICA 척도로 옮긴 촬영 1회 잡음은 ε ≈ 9~17%(교체율 비 17%, 부하 불신뢰도 비 9%)로 "
+            "가정 5%의 2~3배다. ε=10%로 다시 돌리면 채워 넣기의 되찾은 이득이 m=1.2 −35%, m=1.0 −27%(5%에서 −17%/−10%)로, 환자 자신의 촬영을 쓰는 모든 "
+            "추정기가 합의 지도보다 나쁘고 균등 분산(−47%/−37%)에 가까워진다. 가중 매개 중심성(불신뢰도 비 0.85)과 강도(0.79)도 개인 신호 비율이 거의 같다. "
+            "함의: (1) 촬영 1회로는 병전 지도 개인화가 안 된다. (2) H17-13의 '실제 개인화 이득 +0.135'는 각자의 촬영 1회를 참 연결망으로 놓은 값이라, 촬영에서 "
+            "보이는 개인 차의 대부분이 측정 잡음이면 과대 추정일 수 있다(파이프라인이 달라 비가 그대로 옮겨진다는 것은 가정). (3) 지금은 집단 합의 지도가 "
+            "가장 나은 길잡이다."
+        ),
+        verdict="not_supported",
+        evidence=[
+            HypothesisEvidenceOut(
+                title="Barjuan, Soriano & Serrano 2024 -- Optimal navigability of weighted human brain connectomes in physical space (NeuroImage 297:120703); 데이터 Zenodo 14017270",
+                url="https://zenodo.org/records/14017270",
+            ),
+        ],
+        raw_data_note=(
+            "HCP 20쌍(짝 없는 5·8·16·35번 제외). layer 1(462): 교체율 0.334±0.011 / 0.368±0.012, 부하 ρ 0.603 / 0.529, 허브 0.56 / 0.53. "
+            "layer 2(233): 0.244 / 0.277, ρ 0.632 / 0.561, 허브 0.73 / 0.71. MICA 모의(두 사본): ε 2% 교체율 0.039 ρ 0.853, 5% 0.094 / 0.765, "
+            "10% 0.178 / 0.699, 20% 0.324 / 0.640, 사람 사이 0.318 / 0.650. ε=10% 재실행 연쇄 m1.2/m1.0: 합의 0.724/0.644, 채워 넣기 0.677/0.620, "
+            "손상 후 0.673/0.615, 두 번 촬영 0.662/0.608, 당기기 0.662/0.601, μ 0.684/0.617, 5명 평균 0.698/0.627, 균등 분산 0.660/0.611, 오라클 0.859/0.733. "
+            "가중(layer 2): 가중 매개 ρ 0.604 / 0.532, 강도 0.777 / 0.716. 짝은 추론이며 원 자료에 짝 정보는 없다. 400건은 50명 × 병변 8개로 독립이 아니다."
+        ),
+        executed_at="2026-10-06",
+        is_live_computed=False,
+    )
+
+
 def build_hypothesis_notebook() -> list[HypothesisRecordOut]:
     # 후속 가설(docs/48)은 부모 가설 바로 아래에 둔다(H1 → H1-1~H1-5, H2 → H2-1~H2-3, H3 → H3-1).
     return [
@@ -2092,4 +2135,6 @@ def build_hypothesis_notebook() -> list[HypothesisRecordOut]:
         _h17_12_time_varying_plasticity(),
         # docs/59
         _h17_13_premorbid_map_estimation(),
+        # docs/60
+        _h17_14_real_test_retest_noise(),
     ]

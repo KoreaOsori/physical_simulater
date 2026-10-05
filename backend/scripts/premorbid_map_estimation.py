@@ -61,7 +61,7 @@ from scipy import stats
 
 from scripts.fast_reorganize import N, btw_array
 from scripts.null_network_distribution import cascade, global_eff
-from scripts.synthetic_individual_cohort import EPS, IU, LESION_IDX, Base, individual, perturb, reorganize_key, to_adj
+from scripts.synthetic_individual_cohort import EPS as EPS_DEFAULT, IU, LESION_IDX, Base, individual, perturb, reorganize_key, to_adj
 
 N_PAT = 8
 N_REF = 33
@@ -71,6 +71,8 @@ M_LIST = (1.2, 1.0)
 ESTIMATORS = ("consensus", "mu", "post_lesion", "impute_all", "impute_knn", "knn_mean",
               "impute_clean", "impute_eps2", "impute_2scan", "impute_shrink", "oracle")
 EPS_LOW = 0.02
+# 손상 후 촬영 잡음. docs/60에서 실제 반복 촬영으로 잰 값(MICA 척도 ε≈9~17%)을 넣어 보려고 바꿀 수 있게 했다.
+EPS = float(os.environ.get("PREMORBID_EPS", EPS_DEFAULT))
 GUIDES = ESTIMATORS + ("distributed",)
 
 
@@ -217,7 +219,8 @@ def _cohort(src: str, base: Base) -> tuple[np.ndarray, int]:
 def run_unit(args: tuple[str, int]) -> dict:
     src, pi = args
     d = os.environ.get("REORG_CACHE")
-    p = Path(d) / f"premorbid59b_{src}_p{pi}.json" if d else None
+    tag = "" if EPS == EPS_DEFAULT else f"_eps{EPS}"
+    p = Path(d) / f"premorbid59b_{src}{tag}_p{pi}.json" if d else None
     if p and p.exists():
         return json.loads(p.read_text(encoding="utf-8"))
     base = Base()

@@ -73,7 +73,7 @@ _ROBUSTNESS_RECORD_IDS = {
 def test_hypothesis_notebook_has_all_records() -> None:
     records = build_hypothesis_notebook()
     ids = {r.id for r in records}
-    assert len(records) == 50
+    assert len(records) == 51
     assert ids == {
         "h1-disease-hub-correlation",
         *_STATIC_RECORD_IDS,
@@ -125,6 +125,8 @@ _H17_RECORD_IDS = {
     "h17-12-time-matched-strategy": "inconclusive",
     # docs/59
     "h17-13-premorbid-map-from-own-scan": "inconclusive",
+    # docs/60
+    "h17-14-real-test-retest-scan-noise": "not_supported",
 }
 
 
@@ -135,7 +137,7 @@ def test_h17_records_close_the_notebook_with_real_verdicts() -> None:
     for hid, verdict in _H17_RECORD_IDS.items():
         r = by_id[hid]
         assert r.verdict == verdict
-        assert r.executed_at in ("2026-10-02", "2026-10-03")
+        assert r.executed_at in ("2026-10-02", "2026-10-03", "2026-10-06")
         assert r.raw_data_note
     # 검토 의견 8번: '특정 정상 뇌'가 아니라 '정상 집단 대표 커넥톰'
     assert "정상 집단 대표" in h17_title_and_statement(by_id)
@@ -257,7 +259,7 @@ def test_h6_reports_mixed_cross_species_verdict_honestly() -> None:
 def test_hypothesis_notebook_endpoint_returns_200() -> None:
     response = client.get("/api/lab/hypotheses")
     assert response.status_code == 200
-    assert len(response.json()) == 50
+    assert len(response.json()) == 51
 
 
 def h17_title_and_statement(by_id) -> str:
