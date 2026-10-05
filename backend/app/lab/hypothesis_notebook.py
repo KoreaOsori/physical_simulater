@@ -2074,6 +2074,47 @@ def _h17_14_real_test_retest_noise() -> HypothesisRecordOut:
     )
 
 
+def _h17_15_lausanne_retest_premorbid() -> HypothesisRecordOut:
+    return HypothesisRecordOut(
+        id="h17-15-retest-pairs-premorbid-without-noise-assumption",
+        title="H17-15 · 같은 사람의 다른 날 촬영(손상 전 촬영)이 있으면 개인화의 이득을 되찾을 수 있을까? (반복 촬영 짝, 잡음 가정 없음)",
+        statement=(
+            "(H17-14 후속) H17-13·14는 잡음 모델 perturb(ε)와 파이프라인 비율 환산에 기댔다. 같은 사람의 두 실제 촬영을 그대로 '참(병전)'과 '관측'으로 쓰면 "
+            "잡음 가정이 필요 없다. 오라클은 '참 = 촬영 1회'로 정의되므로, 다른 날 찍은 손상 전 촬영이 되찾는 오라클 이득의 몫은 개인화 이득 중 두 촬영에 "
+            "공통인(안정된) 개인 차의 몫이다. 예측: 손상 전 촬영은 오라클 이득의 절반 이상을 되찾는다."
+        ),
+        method=(
+            "Zenodo 14017270 HCP, Lausanne layer 1(462영역), H17-14에서 추론한 반복 촬영 20쌍 × 양방향 = 40건, 병변 8개씩 320건. 참 = 한 촬영(재조직·연쇄도 이 "
+            "연결망 위), 손상 후 관측 = 다른 촬영에서 병변 연결을 지운 것, 참조 = 나머지 42건. 병변은 docs/50 국소 병변 8개와 같은 증후군을 Desikan 해부 이름으로 "
+            "다시 정의. 추정기: 합의, μ, 손상 후 지도, 채워 넣기, 손상 전 촬영(다른 촬영 그대로), 오라클, 균등 분산. 평가는 H17-13과 같음(추정 지도 × 1.2 길잡이, "
+            "참 부하 × m 문턱 연쇄). 95% 구간은 짝 단위 부트스트랩(backend/scripts/lausanne_retest_premorbid.py)."
+        ),
+        result_summary=(
+            "기각 -- 손상 전 촬영이 있어도 개인화 이득은 0이다. 오라클 이득은 m=1.2 +0.078 [+0.075, +0.081], m=1.0 +0.036으로 뚜렷하지만, 같은 사람의 "
+            "다른 날 촬영은 m=1.2 −0.006 [−0.008, −0.003], m=1.0 +0.001 [−0.004, +0.007]로 그 이득의 −8% / +3%만 되찾는다. 8개 병변 모두 같다. 즉 오라클 "
+            "이득은 두 촬영에 공통인 개인 차가 아니라 그 촬영 1회에만 있는 특징(잡음)에서 나온다(연쇄 문턱이 그 촬영의 부하로 정해지므로). H17-13의 MICA "
+            "'실제 개인화 이득 +0.135'도 같은 이유일 가능성이 크다. 채워 넣기(−7% / +5%)와 손상 후 지도(−10% / +1%)도 합의와 거의 같다. 지도 정확도에서도 "
+            "합의(ρ 0.66)가 같은 사람의 다른 촬영(ρ 0.60)보다 낫다. H17-14의 환산(ε=10%에서 −0.047)보다 해는 훨씬 작아(−0.006), perturb 모델이 해를 과장했다. "
+            "결론: 현재 트랙토그래피로는 개인 정상 부하 지도를 잴 수 없고, H17의 실용 형태는 집단 합의 지도 기반 길잡이다."
+        ),
+        verdict="not_supported",
+        evidence=[
+            HypothesisEvidenceOut(
+                title="Barjuan, Soriano & Serrano 2024 -- Optimal navigability of weighted human brain connectomes in physical space (NeuroImage 297:120703); 데이터 Zenodo 14017270",
+                url="https://zenodo.org/records/14017270",
+            ),
+        ],
+        raw_data_note=(
+            "연쇄 m1.2/m1.0: 합의 0.840/0.715, μ 0.811/0.706, 손상 후 0.832/0.715, 채워 넣기 0.834/0.716, 손상 전 촬영 0.834/0.716, 오라클 0.917/0.750, "
+            "균등 분산 0.809/0.711. Spearman: 합의 0.66, μ 0.70, 손상 후 0.60, 채워 넣기 0.61, 손상 전 촬영 0.60. 병변 크기(Lausanne): 대뇌색맹 31, 운동맹 21, "
+            "베르니케 14, 집행기능 36, 전행성 기억상실 10, 발린트 27, 복측 동시실인 16, 안톤 14. 이진화 상위 6,751개(밀도 6.34%), 거리 = 촬영 공간 무게중심 "
+            "좌표(근사). 짝은 추론이고, 참조 42건에 다른 사람의 두 촬영이 모두 들어 있다. 짝 20개라 ±0.01 수준의 작은 이득은 가르지 못한다."
+        ),
+        executed_at="2026-10-06",
+        is_live_computed=False,
+    )
+
+
 def build_hypothesis_notebook() -> list[HypothesisRecordOut]:
     # 후속 가설(docs/48)은 부모 가설 바로 아래에 둔다(H1 → H1-1~H1-5, H2 → H2-1~H2-3, H3 → H3-1).
     return [
@@ -2137,4 +2178,6 @@ def build_hypothesis_notebook() -> list[HypothesisRecordOut]:
         _h17_13_premorbid_map_estimation(),
         # docs/60
         _h17_14_real_test_retest_noise(),
+        # docs/61
+        _h17_15_lausanne_retest_premorbid(),
     ]
