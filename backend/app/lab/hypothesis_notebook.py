@@ -2115,6 +2115,49 @@ def _h17_15_lausanne_retest_premorbid() -> HypothesisRecordOut:
     )
 
 
+def _h17_16_consensus_size_curve() -> HypothesisRecordOut:
+    return HypothesisRecordOut(
+        id="h17-16-consensus-reference-size-curve",
+        title="H17-16 · 합의 지도 길잡이는 참조 인원이 몇 명이면 충분하고, 다른 코호트의 합의로도 되는가?",
+        statement=(
+            "(H17-15 후속) 개인 촬영은 길잡이에 아무것도 더하지 못했으므로(H17-15) H17의 실용 형태는 집단 합의 지도 길잡이다. 예측: 참조 n명 다수결 합의의 "
+            "길잡이 성능은 10~20명에서 포화되고, 다른 코호트·다른 처리 방식의 외부 합의(Liu 2023 HCP)는 같은 코호트 합의보다 못하다."
+        ),
+        method=(
+            "MICA-MICs(Schaefer-400, 환자 25명 × docs/50 병변 8개, 참조 n = 1·2·3·5·10·20·35·49, 외부 합의 = Liu 2023)와 Zenodo HCP 반복 촬영(Lausanne 462, "
+            "40단위 × Desikan 병변 8개, 참조 n = 1·2·3·5·10·15·23, 한 사람당 촬영 1건). n이 최대보다 작으면 무작위 표본 3번 평균. 평가는 H17-13·15와 같음 "
+            "(추정 지도 × 1.2 길잡이, 자기 부하 × m 문턱 연쇄). 95% 구간은 단위 부트스트랩(backend/scripts/consensus_size_curve.py)."
+        ),
+        result_summary=(
+            "지지 -- 합의는 참조 약 10명에서 포화되고, 측정 방식이 다른 외부 합의는 크게 못하다. m=1.2에서 MICA 10명 92%·20명 94%·35명 97%(균등 분산 0% → "
+            "49명 100%), Lausanne 10명 104%(23명과 같음). 정확도도 10~20명에서 멈춘다(ρ 0.77→0.78, 0.64→0.66). 외부 Liu 합의는 MICA에서 32%(m1.2)·22%(m1.0), "
+            "ρ 0.52로 MICA 1명(0.66)보다도 낮다 -- 사람 수보다 측정 방식 일치가 중요하다. 혼재 부분: MICA에서는 다른 사람 1명의 지도가 49명 합의보다 나았지만"
+            "(m1.2 +0.009, m1.0 +0.013) Lausanne m1.2에서는 재현되지 않았다(−0.003). Lausanne m1.0에서는 균등 분산도 합의보다 나아(+0.007) 오라클 말고는 지도가 "
+            "차이를 만들지 못한다. 2~3명에서 성능이 꺼지는 현상(MICA 2명 −0.018)은 다수결 동점 처리 탓으로 보이나 확인하지 않았다. 실용적 결론: 같은 측정 "
+            "방식의 건강인 10~20명 합의 지도."
+        ),
+        verdict="supported",
+        evidence=[
+            HypothesisEvidenceOut(
+                title="Royer et al. 2022 -- MICA-MICs: An open MRI dataset for multiscale neuroscience (Scientific Data 9:569)",
+                url="https://www.nature.com/articles/s41597-022-01682-y",
+            ),
+            HypothesisEvidenceOut(
+                title="Barjuan, Soriano & Serrano 2024 -- Optimal navigability of weighted human brain connectomes in physical space (NeuroImage 297:120703); 데이터 Zenodo 14017270",
+                url="https://zenodo.org/records/14017270",
+            ),
+        ],
+        raw_data_note=(
+            "MICA 연쇄 m1.2/m1.0: 1명 0.738/0.662, 2명 0.711/0.640, 3명 0.719/0.645, 5명 0.719/0.644, 10명 0.724/0.649, 20명 0.726/0.647, 35명 0.727/0.648, "
+            "49명 0.729/0.649, 외부 0.685/0.621, 오라클 0.862/0.737, 균등 분산 0.664/0.613. Lausanne: 1명 0.835/0.718, 2명 0.833/0.720, 3명 0.830/0.713, "
+            "5명 0.835/0.715, 10명 0.840/0.708, 15명 0.838/0.709, 23명 0.838/0.706, 오라클 0.922/0.750, 균등 분산 0.809/0.714. MICA 환자는 짝수 번호 25명만, "
+            "표본은 n마다 3번. 외부 합의는 이진화 방식(거리 보정 합의)도 달라 측정 방식과 합의 방식의 몫을 나누지 못했다."
+        ),
+        executed_at="2026-10-06",
+        is_live_computed=False,
+    )
+
+
 def build_hypothesis_notebook() -> list[HypothesisRecordOut]:
     # 후속 가설(docs/48)은 부모 가설 바로 아래에 둔다(H1 → H1-1~H1-5, H2 → H2-1~H2-3, H3 → H3-1).
     return [
@@ -2180,4 +2223,6 @@ def build_hypothesis_notebook() -> list[HypothesisRecordOut]:
         _h17_14_real_test_retest_noise(),
         # docs/61
         _h17_15_lausanne_retest_premorbid(),
+        # docs/62
+        _h17_16_consensus_size_curve(),
     ]

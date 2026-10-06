@@ -73,7 +73,7 @@ _ROBUSTNESS_RECORD_IDS = {
 def test_hypothesis_notebook_has_all_records() -> None:
     records = build_hypothesis_notebook()
     ids = {r.id for r in records}
-    assert len(records) == 52
+    assert len(records) == 53
     assert ids == {
         "h1-disease-hub-correlation",
         *_STATIC_RECORD_IDS,
@@ -129,6 +129,8 @@ _H17_RECORD_IDS = {
     "h17-14-real-test-retest-scan-noise": "not_supported",
     # docs/61
     "h17-15-retest-pairs-premorbid-without-noise-assumption": "not_supported",
+    # docs/62
+    "h17-16-consensus-reference-size-curve": "supported",
 }
 
 
@@ -261,7 +263,7 @@ def test_h6_reports_mixed_cross_species_verdict_honestly() -> None:
 def test_hypothesis_notebook_endpoint_returns_200() -> None:
     response = client.get("/api/lab/hypotheses")
     assert response.status_code == 200
-    assert len(response.json()) == 52
+    assert len(response.json()) == 53
 
 
 def h17_title_and_statement(by_id) -> str:
